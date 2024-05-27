@@ -2,26 +2,234 @@
 import CharacterBox from "@/components/Boxs/CharacterBox.vue";
 import {ref} from "vue";
 
-defineProps({
+const props = defineProps({
   game: String,
   items: Object,
+  dups: Object,
+  switchCharImg: String,
+  itemImg: String,
+  itemLink: String,
+  itemElement: String,
+  itemGroup: String
 })
+
+function replaceChar(link, array) {
+  return link.replace(/\{var(\d+)\}/g, (substr, idx) => array[parseInt(idx) - 1])
+}
 </script>
 
 <template>
+  <div class="switch">
+    <img alt="character" :src="switchCharImg">
+  </div>
   <CharacterBox v-for="item in items"
     :game="'StarRail'"
     :item="item"
-    :itemImg="`https://api.yatta.top/hsr/assets/UI/avatar/medium/${item.id}.png`"
-    :itemLink="`https://hsr.yatta.top/en/archive/avatar/${item.id}/${item.name}`"
-    :itemElement="`https://api.yatta.top/hsr/assets/UI/attribute/IconAttribute${item.types.combatType}.png`"
-    :itemGroup="`https://api.yatta.top/hsr/assets/UI/profession/IconProfession${item.types.pathType}Small.png`"
+    :dups="dups"
+    :itemImg="replaceChar(itemImg, [item.id])"
+    :itemLink="replaceChar(itemLink, [item.id, item.name])"
+    :itemElement="replaceChar(itemElement, [item.types.combatType])"
+    :itemGroup="replaceChar(itemGroup, [item.types.pathType])"
   />
 </template>
 
 <style scoped>
+body {
+  background-color: #1a1c1d;
+  color: #787168;
+  margin: 0;
+}
 
+::-webkit-scrollbar {
+  display:none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 200px);
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  background-color: #222324;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  border: solid 3px #787168;
+  border-radius: 0 0 15px 15px;
+  border-top: 0;
+}
+
+.switch button {
+  color: #888;
+  background-color: #363636;
+  border-width: 0;
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-style: inherit;
+  line-height: inherit;
+  height: 24px;
+  width: 45px;
+  margin: 0 5px;
+  padding: 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.switch button:hover {
+  background-color: #484848;
+}
+
+.sliderLeft {
+  flex-direction: row;
+  margin-left: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.sliderRight {
+  flex-direction: row-reverse;
+  margin-left: 21px;
+  transition: all 0.2s ease-in-out;
+}
+
+.slider {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  z-index: 2;
+}
+
+.elements, .weapons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222324;
+  border-style: solid;
+  border-color: #787168;
+  width: fit-content;
+  flex-direction: column;
+  margin: 0;
+  position: fixed;
+  padding: 10px
+}
+
+.elements {
+  left: 0;
+  border-left: none;
+  border-radius: 0 15px 15px 0;
+}
+
+.weapons {
+  right: 0;
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+}
+
+.elementsHidden {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 4px;
+  width: 70px;
+  user-select: none;
+}
+
+.element, .weapon {
+  min-height: 50px;
+  min-width: 50px;
+  max-height: 50px;
+  max-width: 50px;
+  opacity: 50%;
+}
+
+.element:hover, .weapon:hover {
+  transform: rotate(5deg);
+}
+
+.opaque {
+  opacity: 100%;
+}
+
+.weapon {
+  background-color: #2A2C2D;
+  border-radius: 50%;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.characters {
+  display: flex;
+}
+
+.character {
+  display: flex;
+  border-style: solid;
+  border-color: #787168;
+  border-radius: 25px;
+}
+
+.playerInfo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
+}
+
+.characterList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.weaponList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.switchGameImage {
+  width: 35px;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .filters {
+    margin-top: 40px;
+  }
+
+  .switch {
+    margin-top: 38px;
+    position: fixed;
+  }
+
+  .characterList, .weaponList {
+    margin-top: 100px;
+  }
+}
 </style>
-
-
-<!--`https://ambr.top/en/archive/avatar/${item.id}/${item.name}`-->

@@ -27,9 +27,17 @@ export async function getGIWeaponJson() {
     .then(response => { return response.json() });
 }
 
+function filterObject(item, remove) {
+  return Object.keys(item).filter(key => !remove.includes(Number(key))).reduce((obj, key) => {
+    return {
+      ...obj, [key]: item[key]
+    }
+  }, {})
+}
+
 export const useGachaStore = defineStore('gacha', {
   state: () => ({
-    dups: {},
+    dups: null,
     items: {}
   }),
   actions: {
@@ -37,14 +45,13 @@ export const useGachaStore = defineStore('gacha', {
       const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
       const res = await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
       const data = await res.json()
-      console.log(data)
-      this.dups = data
-      ;
+      this.dups = await data.StarRail
     },
-    async getItemInfo(url) {
+    async getItemInfo(url, remove) {
       const res = await fetch(url)
       const data = await res.json()
-      this.items = data.data.items
+      const test = data.data.items
+      this.items = filterObject(test, remove)
     }
   },
   getters: {

@@ -7,15 +7,29 @@ import {onUpdated, ref} from "vue";
 defineProps({
   game: String,
   item: Object,
+  dups: Object,
   itemImg: String,
   itemLink: String,
   itemElement: String,
   itemGroup: String
 })
 
+function ceColor(CE) {
+  if (CE.includes('6')) {
+    return 'all'
+  } else if(CE === '') {
+    return 'none'
+  } else {
+    return 'some'
+  }
+}
+
 </script>
 
 <template>
+  <code>
+  </code>
+
 <div class="characterBox">
   <div class="characterContainer">
     <div class="characterPortrait">
@@ -28,11 +42,17 @@ defineProps({
       <img class="characterElement" alt="element" :src="itemElement">
       <img class="characterGroup" alt="group" :src="itemGroup">
     </div>
-<!--    <div class="characterCE" v-for="person in store.dups.Characters[character.name]">-->
-<!--      <div class="CE">-->
-<!--        <div>{{person}}</div>-->
-<!--      </div>-->
-<!--    </div>-->
+    <div class="characterCE">
+      <div class="CE" v-if="dups" v-for="(CE, key) in dups.Characters[item.name].CE">
+        <div class="personName">{{key}}</div>
+        <div class="CECount" :class="ceColor(CE)">{{CE}}</div>
+        <div class="buttons">
+          <button class="up" v-if="!CE.includes('6')">+</button>
+          <button class="down" v-if="CE !== ''">-</button>
+        </div>
+      </div>
+    </div>
+    <div v-if="!dups">Loading...</div>
   </div>
   <div class="characterName">{{item.name}}</div>
 </div>
@@ -139,6 +159,7 @@ defineProps({
 
 .CE {
   width: 60px;
+  height: 100%;
   margin: 0;
 }
 
@@ -147,6 +168,7 @@ defineProps({
   font-size: 1.2em;
   font-weight: 300;
   text-align: center;
+  color: #ddd;
 }
 
 .CE .CECount {

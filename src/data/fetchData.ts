@@ -38,7 +38,8 @@ function filterObject(item, remove) {
 export const useGachaStore = defineStore('gacha', {
   state: () => ({
     dups: null,
-    items: {}
+    characters: {},
+    weapons: {}
   }),
   actions: {
     async getSheetDataStarRail() {
@@ -47,11 +48,15 @@ export const useGachaStore = defineStore('gacha', {
       const data = await res.json()
       this.dups = await data.StarRail
     },
-    async getItemInfo(url, remove) {
+    async getCharacterInfo(url, remove) {
       const res = await fetch(url)
       const data = await res.json()
-      const test = data.data.items
-      this.items = filterObject(test, remove)
+      this.characters = filterObject(data.data.items, remove)
+    },
+    async getWeaponInfo(url, remove) {
+      const res = await fetch(url)
+      const data = await res.json()
+      this.weapons = filterObject(data.data.items, remove)
     }
   },
   getters: {

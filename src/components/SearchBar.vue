@@ -1,0 +1,28 @@
+
+
+<script setup>
+import {ref} from "vue";
+
+let searchValue = ref('')
+</script>
+
+<template>
+<input class="search" type="text" autofocus :value="searchValue" @change="e => searchValue = e.target.value">
+</template>
+
+<style scoped>
+.search {
+  display: flex;
+  width: 35%;
+  background-color: #222324;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75em;
+  color: #787168;
+  font-size: 18px;
+  position: fixed;
+  top: 2.75em;
+  align-self: flex-start;
+  text-align: center;
+}
+</style>

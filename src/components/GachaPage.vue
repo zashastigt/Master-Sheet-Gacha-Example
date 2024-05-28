@@ -1,17 +1,24 @@
 <script setup>
-import CharacterBox from "@/components/Boxs/CharacterBox.vue";
+import ItemBox from "@/components/Boxs/ItemBox.vue";
 import {ref} from "vue";
+import SearchBar from "@/components/SearchBar.vue";
+import Filter from "@/components/Filter.vue";
 
 const props = defineProps({
   game: String,
   items: Object,
   dups: Object,
+  elements: Array,
+  listShown: Boolean,
   switchCharImg: String,
+  switchWeaponImg: String,
   itemImg: String,
   itemLink: String,
   itemElement: String,
   itemGroup: String
 })
+
+defineEmits(['switchList'])
 
 function replaceChar(link, array) {
   return link.replace(/\{var(\d+)\}/g, (substr, idx) => array[parseInt(idx) - 1])
@@ -19,47 +26,60 @@ function replaceChar(link, array) {
 </script>
 
 <template>
-  <div class="switch">
-    <img alt="character" :src="switchCharImg">
+<Filter
+  :listShown="listShown"
+  :elements="elements"
+/>
+<div id="container">
+  <div id="gachaPage">
+    <div class="switch">
+      <img alt="character" :src="switchCharImg">
+      <button @click="$emit('switchList')">
+        <div :class="`slider ${listShown ? 'sliderLeft' : 'sliderRight'}`"></div>
+      </button>
+      <img alt="weapon" :src="switchWeaponImg">
+    </div>
+    <div class="itemList">
+      <ItemBox v-for="item in items"
+               :game="'StarRail'"
+               :item="item"
+               :dups="dups"
+               :list-shown="listShown"
+               :item-img="replaceChar(itemImg, [item.id])"
+               :item-link="replaceChar(itemLink, [item.id, item.name])"
+               :item-element="replaceChar(itemElement, [item.types.combatType])"
+               :item-group="replaceChar(itemGroup, [item.types.pathType])"
+      />
+    </div>
   </div>
-  <CharacterBox v-for="item in items"
-    :game="'StarRail'"
-    :item="item"
-    :dups="dups"
-    :itemImg="replaceChar(itemImg, [item.id])"
-    :itemLink="replaceChar(itemLink, [item.id, item.name])"
-    :itemElement="replaceChar(itemElement, [item.types.combatType])"
-    :itemGroup="replaceChar(itemGroup, [item.types.pathType])"
-  />
+</div>
+
 </template>
 
 <style scoped>
-body {
-  background-color: #1a1c1d;
-  color: #787168;
-  margin: 0;
-}
-
-::-webkit-scrollbar {
-  display:none;
-}
-
-#root {
+#container {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
-.container {
+#gachaPage {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: calc(100vw - 200px);
 }
 
+::-webkit-scrollbar {
+  display:none;
+}
+
 *:focus-visible {
   outline: none;
 }
+
+
 
 .switch {
   display: flex;
@@ -110,80 +130,7 @@ body {
   background-color: blueviolet;
 }
 
-.filters {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  position: fixed;
-  height: 100vh;
-  z-index: 2;
-}
 
-.elements, .weapons {
-  display: flex;
-  justify-content: space-between;
-  background-color: #222324;
-  border-style: solid;
-  border-color: #787168;
-  width: fit-content;
-  flex-direction: column;
-  margin: 0;
-  position: fixed;
-  padding: 10px
-}
-
-.elements {
-  left: 0;
-  border-left: none;
-  border-radius: 0 15px 15px 0;
-}
-
-.weapons {
-  right: 0;
-  border-right: none;
-  border-radius: 15px 0 0 15px;
-}
-
-.elementsHidden {
-  display: none;
-}
-
-label {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  margin: 4px;
-  width: 70px;
-  user-select: none;
-}
-
-.element, .weapon {
-  min-height: 50px;
-  min-width: 50px;
-  max-height: 50px;
-  max-width: 50px;
-  opacity: 50%;
-}
-
-.element:hover, .weapon:hover {
-  transform: rotate(5deg);
-}
-
-.opaque {
-  opacity: 100%;
-}
-
-.weapon {
-  background-color: #2A2C2D;
-  border-radius: 50%;
-}
-
-input[type=checkbox] {
-  display: none;
-}
 
 .characters {
   display: flex;
@@ -202,7 +149,7 @@ input[type=checkbox] {
   justify-items: center;
 }
 
-.characterList {
+.itemList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -228,7 +175,7 @@ input[type=checkbox] {
     position: fixed;
   }
 
-  .characterList, .weaponList {
+  .itemList, .weaponList {
     margin-top: 100px;
   }
 }

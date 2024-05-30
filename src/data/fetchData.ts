@@ -1,39 +1,39 @@
 import {defineStore} from "pinia";
+import {convertToObject, filterObject, toPascalCase} from "./manipulation";
 
-export async function getSheetDataJson() {
-  const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
-
-  return await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
-    .then(response => (response.json()));
-}
-
-export async function getSRCharacterJson() {
-  return await fetch(`https://api.yatta.top/hsr/v2/en/avatar`)
-    .then(response => { return response.json() });
-}
-
-export async function getSRWeaponJson() {
-  return await fetch(`https://api.yatta.top/hsr/v2/en/equipment`)
-    .then(response => { return response.json() });
-}
-
-export async function getGICharacterJson() {
-  return await fetch(`https://api.ambr.top/v2/en/avatar`)
-    .then(response => { return response.json() });
-}
-
-export async function getGIWeaponJson() {
-  return await fetch(`https://api.ambr.top/v2/en/weapon`)
-    .then(response => { return response.json() });
-}
-
-function filterObject(item, remove) {
-  return Object.keys(item).filter(key => !remove.includes(Number(key))).reduce((obj, key) => {
+function convertStarRail(object, remove) {
+  const newObj = Object.keys(object).map(item => {
     return {
-      ...obj, [key]: item[key]
+      [item]: {
+        id: object[item].id,
+        name: object[item].name,
+        rarity: object[item].rank,
+        element: object[item].types.combatType,
+        group: toPascalCase(object[item].types.pathType)
+      }
     }
-  }, {})
+  })
+  return filterObject(convertToObject(newObj), remove)
 }
+
+function convertGenshin(object, remove) {
+  console.log(object)
+  const newObj = Object.keys(object).map(item => {
+    const group = toPascalCase(object[item].weaponType.split('_')[1])
+    console.log(group)
+    return {
+      [item]: {
+        id: object[item].icon,
+        name: object[item].name,
+        rarity: object[item].rank,
+        element: object[item].element,
+        group: group
+      }
+    }
+  })
+  return filterObject(convertToObject(newObj), remove)
+}
+
 
 export const useGachaStore = defineStore('gacha', {
   state: () => ({
@@ -48,15 +48,33 @@ export const useGachaStore = defineStore('gacha', {
       const data = await res.json()
       this.dups = await data.StarRail
     },
-    async getCharacterInfo(url, remove) {
-      const res = await fetch(url)
+    async getSheetDataGenshin() {
+      const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
+      const res = await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
       const data = await res.json()
-      this.characters = filterObject(data.data.items, remove)
+      this.dups = await data.Genshin
     },
-    async getWeaponInfo(url, remove) {
+    async getCharacterInfo(url, game, remove) {
       const res = await fetch(url)
       const data = await res.json()
-      this.weapons = filterObject(data.data.items, remove)
+      switch (game) {
+        case 'StarRail':
+          return this.characters = convertStarRail(data.data.items, remove)
+        case 'Genshin':
+          return this.characters = convertGenshin(data.data.items, remove)
+      }
+
+
+    },
+    async getWeaponInfo(url, game, remove) {
+      const res = await fetch(url)
+      const data = await res.json()
+      switch (game) {
+        case 'StarRail':
+          return this.weapons = convertStarRail(data.data.items, remove)
+        case 'Genshin':
+          return this.weapons = convertGenshin(data.data.items, remove)
+      }
     }
   },
   getters: {

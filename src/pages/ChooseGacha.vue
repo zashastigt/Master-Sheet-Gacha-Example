@@ -1,17 +1,13 @@
 <script setup>
-defineProps({
-  choosenGacha: String
-})
 
-defineEmits(['chooseGenshin', 'chooseStarrail', 'chooseWuwa'])
 
 </script>
 
 <template>
   <div id="container">
-    <img alt="Genshin" :src="`./Arlecchino_Splash_Art.png`" @click="$emit('chooseGenshin')">
-    <img alt="StarRail" :src="`./Kafka_Splash_Art.png`" @click="$emit('chooseStarrail')">
-    <img alt="WutheringWaves" :src="`./Yinlin_Splash_Art.png`" @click="$emit('chooseWuwa')">
+    <RouterLink to="/Genshin"><img alt="Genshin" :src="`./Arlecchino_Splash_Art.png`"></RouterLink>
+    <RouterLink to="/StarRail"><img alt="StarRail" :src="`./Kafka_Splash_Art.png`"></RouterLink>
+    <RouterLink to="/WutheringWaves"><img alt="WutheringWaves" :src="`./Yinlin_Splash_Art.png`"></RouterLink>
   </div>
 
 </template>
@@ -25,8 +21,13 @@ defineEmits(['chooseGenshin', 'chooseStarrail', 'chooseWuwa'])
   width: 100vw;
 }
 
-img {
+a {
   max-width: 33%;
+  max-height: 100%;
+}
+
+img {
+  max-width: 100%;
   max-height: 100%;
   transition: transform 1s;
 }

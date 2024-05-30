@@ -1,5 +1,7 @@
 <script setup>
-defineProps({
+import {onUpdated} from "vue";
+
+const props = defineProps({
   game: String,
   item: Object,
   dups: Object,
@@ -39,7 +41,7 @@ function rarity(rarity) {
         <img class="imgItem" alt="img" :src="itemImg">
       </a>
     </div>
-    <div :class="`rarityStrip ${rarity(item.rank)}`"></div>
+    <div :class="`rarityStrip ${rarity(item.rarity)}`"></div>
     <div class="info">
       <img v-if="listShown" class="element" alt="element" :src="itemElement">
       <img class="group" alt="group" :src="itemGroup">

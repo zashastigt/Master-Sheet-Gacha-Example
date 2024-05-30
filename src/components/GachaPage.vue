@@ -1,8 +1,9 @@
 <script setup>
 import ItemBox from "@/components/Boxs/ItemBox.vue";
-import {ref} from "vue";
+import {onUpdated, ref} from "vue";
 import SearchBar from "@/components/SearchBar.vue";
 import Filter from "@/components/Filter.vue";
+import {replaceChar} from "@/data/manipulation.ts";
 
 const props = defineProps({
   game: String,
@@ -10,6 +11,7 @@ const props = defineProps({
   dups: Object,
   elements: Array,
   listShown: Boolean,
+  elementSrc: String,
   switchCharImg: String,
   switchWeaponImg: String,
   itemImg: String,
@@ -18,17 +20,18 @@ const props = defineProps({
   itemGroup: String
 })
 
+
+
 defineEmits(['switchList'])
 
-function replaceChar(link, array) {
-  return link.replace(/\{var(\d+)\}/g, (substr, idx) => array[parseInt(idx) - 1])
-}
+
 </script>
 
 <template>
 <Filter
   :listShown="listShown"
   :elements="elements"
+  :element-src="elementSrc"
 />
 <div id="container">
   <div id="gachaPage">
@@ -47,8 +50,8 @@ function replaceChar(link, array) {
                :list-shown="listShown"
                :item-img="replaceChar(itemImg, [item.id])"
                :item-link="replaceChar(itemLink, [item.id, item.name])"
-               :item-element="replaceChar(itemElement, [item.types.combatType])"
-               :item-group="replaceChar(itemGroup, [item.types.pathType])"
+               :item-element="replaceChar(itemElement, [item.element])"
+               :item-group="replaceChar(itemGroup, [item.group])"
       />
     </div>
   </div>

@@ -1,12 +1,11 @@
-
-
 <script setup>
-
 import {ref} from "vue";
+import {replaceChar} from "@/data/manipulation.ts";
 
 const props = defineProps({
   listShown: Boolean,
-  elements: Array
+  elements: Array,
+  elementSrc: String
 })
 
 const checked = ref(false)
@@ -19,7 +18,7 @@ const checked = ref(false)
   <ul :class="`elements ${listShown ? '' : 'elementHidden'}`">
     <label v-for="element in elements">
       <input type="checkbox" value="" @change="checked = !checked" :checked="checked">
-      <img :alt="element" :class="`element ${checked === true ? 'opaque' : ''}`" :src="`https://api.yatta.top/hsr/assets/UI/attribute/IconAttribute${element}.png`">
+      <img :alt="element" :class="`element ${checked === true ? 'opaque' : ''}`" :src="`${replaceChar(elementSrc, element)}`">
       <span>{{}}</span>
     </label>
   </ul>

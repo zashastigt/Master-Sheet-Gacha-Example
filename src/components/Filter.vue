@@ -8,7 +8,7 @@ const props = defineProps({
   elementSrc: String
 })
 
-const checked = ref(false)
+let checked = ref(false)
 
 </script>
 

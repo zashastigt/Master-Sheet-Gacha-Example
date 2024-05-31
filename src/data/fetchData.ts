@@ -3,7 +3,6 @@ import {convertToObject, filterObject, toPascalCase} from "./manipulation";
 
 function convertStarRail(object, remove) {
   const newObj = Object.keys(object).map(item => {
-    console.log(typeof item)
     return {
       [item]: {
         id: object[item].id,
@@ -19,9 +18,7 @@ function convertStarRail(object, remove) {
 }
 
 function convertGenshin(object, type, remove) {
-  console.log(object)
   const newObj = Object.keys(object).map(item => {
-    console.log(typeof item)
     let group = {}
     if (type === 'character') {
       group = toPascalCase(object[item].weaponType.split('_')[1])
@@ -45,7 +42,8 @@ function convertGenshin(object, type, remove) {
 
 export const useGachaStore = defineStore('gacha', {
   state: () => ({
-    dups: null,
+    dupsStarRail: null,
+    dupsGenshin: null,
     characters: {},
     weapons: {}
   }),
@@ -54,13 +52,13 @@ export const useGachaStore = defineStore('gacha', {
       const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
       const res = await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
       const data = await res.json()
-      this.dups = await data.StarRail
+      this.dupsStarRail = await data.StarRail
     },
     async getSheetDataGenshin() {
       const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
       const res = await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
       const data = await res.json()
-      this.dups = await data.Genshin
+      this.dupsGenshin = await data.Genshin
     },
     async getCharacterInfo(url, game, remove) {
       const res = await fetch(url)
@@ -71,7 +69,6 @@ export const useGachaStore = defineStore('gacha', {
         case 'Genshin':
           return this.characters = convertGenshin(data.data.items, 'character', remove)
       }
-
 
     },
     async getWeaponInfo(url, game, remove) {

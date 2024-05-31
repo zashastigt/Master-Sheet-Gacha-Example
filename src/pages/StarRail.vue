@@ -7,7 +7,7 @@ const listShown = ref(true)
 const elements = ["Physical", "Fire", "Ice", "Thunder", "Wind", "Quantum", "Imaginary"]
 const store = useGachaStore()
 
-store.getCharacterInfo(`https://api.yatta.top/hsr/v2/en/avatar`, 'StarRail', [8001, 8003, 8005, 8007, 8009, 8011, 8013])
+store.getCharacterInfo(`https://api.yatta.top/hsr/v2/en/avatar`, 'StarRail', ['8001', '8003', '8005', '8007', '8009', '8011', '8013'])
 store.getWeaponInfo(`https://api.yatta.top/hsr/v2/en/equipment`, 'StarRail', [])
 
 
@@ -30,7 +30,7 @@ function trailblazerFix() {
   <GachaPage v-if="trailblazerFix(store.characters)"
              :game="'StarRail'"
              :items="listShown ? trailblazerFix(store.characters) : store.weapons"
-             :dups="store.dups"
+             :dups="store.dupsStarRail"
              :elements="elements"
              :list-shown="listShown"
              :element-src="`https://api.yatta.top/hsr/assets/UI/attribute/IconAttribute{var1}.png`"

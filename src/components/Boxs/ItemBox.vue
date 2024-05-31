@@ -1,5 +1,8 @@
 <script setup>
-import {onUpdated} from "vue";
+import {onBeforeMount, onUpdated} from "vue";
+import {useGachaStore} from "@/data/fetchData.ts";
+
+const store = useGachaStore()
 
 const props = defineProps({
   game: String,
@@ -31,6 +34,7 @@ function rarity(rarity) {
     return 'rarityThreeStar'
   }
 }
+
 </script>
 
 <template>

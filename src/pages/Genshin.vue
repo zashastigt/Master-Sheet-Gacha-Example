@@ -17,7 +17,7 @@ store.getCharacterInfo(`https://api.ambr.top/v2/en/avatar`, 'Genshin', [
   '10000005-dendro',
 
 ])
-store.getWeaponInfo(`https://api.ambr.top/v2/en/weapon`, 'Genshin', [])
+store.getWeaponInfo(`https://api.ambr.top/v2/en/weapon`, 'Genshin', ['11101', '11201', '12101', '12201', '13101', '13201', '14101', '14201', '15101', '15201'])
 
 
 store.getSheetDataGenshin()
@@ -54,8 +54,7 @@ function travelerFix() {
 }
 
 onUpdated(() => {
-  console.log(store.dups)
-  console.log(store.characters)
+
 })
 </script>
 
@@ -63,7 +62,7 @@ onUpdated(() => {
   <GachaPage v-if="store.characters"
              :game="'Genshin'"
              :items="listShown ? travelerFix(store.characters) : store.weapons"
-             :dups="store.dups"
+             :dups="store.dupsGenshin"
              :elements="elements"
              :list-shown="listShown"
              :element-src="`https://api.ambr.top/assets/UI/UI_Buff_Element_{var1}.png`"

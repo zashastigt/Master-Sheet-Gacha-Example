@@ -59,14 +59,16 @@ let checked = ref(false)
 
 .elements {
   left: 0;
+  border-top: none;
   border-left: none;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 0 15px 0;
 }
 
 .weapons {
   right: 0;
+  border-top: none;
   border-right: none;
-  border-radius: 15px 0 0 15px;
+  border-radius: 0 0 0 15px;
 }
 
 .elementsHidden {

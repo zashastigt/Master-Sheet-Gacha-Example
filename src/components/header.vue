@@ -7,21 +7,20 @@ const showMenu = ref(false)
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="Genshin">Genshin</RouterLink>
-  </nav>
 <div id="header">
-  <div class="navigation">
-    <span class="link"></span>
-  </div>
+  <nav class="navigation">
+    <RouterLink class="link" to="/">Home</RouterLink>
+    <RouterLink class="link" to="Genshin">Genshin</RouterLink>
+    <RouterLink class="link" to="StarRail">Star Rail</RouterLink>
+    <RouterLink class="link" to="WutheringWaves">Wuthering Waves</RouterLink>
+  </nav>
 </div>
 </template>
 
 <style scoped>
 #header {
   display: flex;
-  width: 95%;
+  width: calc(100% - 30px);
   height: 25px;
   align-items: center;
   justify-content: center;
@@ -55,7 +54,7 @@ const showMenu = ref(false)
 }
 
 .link:hover {
-  transform: rotate(1deg);
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 600px) {

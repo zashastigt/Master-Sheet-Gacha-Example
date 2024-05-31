@@ -3,31 +3,39 @@ import {convertToObject, filterObject, toPascalCase} from "./manipulation";
 
 function convertStarRail(object, remove) {
   const newObj = Object.keys(object).map(item => {
+    console.log(typeof item)
     return {
       [item]: {
         id: object[item].id,
         name: object[item].name,
         rarity: object[item].rank,
         element: object[item].types.combatType,
-        group: toPascalCase(object[item].types.pathType)
+        group: toPascalCase(object[item].types.pathType),
+        icon: object[item].id
       }
     }
   })
   return filterObject(convertToObject(newObj), remove)
 }
 
-function convertGenshin(object, remove) {
+function convertGenshin(object, type, remove) {
   console.log(object)
   const newObj = Object.keys(object).map(item => {
-    const group = toPascalCase(object[item].weaponType.split('_')[1])
-    console.log(group)
+    console.log(typeof item)
+    let group = {}
+    if (type === 'character') {
+      group = toPascalCase(object[item].weaponType.split('_')[1])
+    } else {
+      group = toPascalCase(object[item].type.split('_')[1])
+    }
     return {
       [item]: {
-        id: object[item].icon,
+        id: object[item].id,
         name: object[item].name,
         rarity: object[item].rank,
         element: object[item].element,
-        group: group
+        group: group,
+        icon: object[item].icon
       }
     }
   })
@@ -61,7 +69,7 @@ export const useGachaStore = defineStore('gacha', {
         case 'StarRail':
           return this.characters = convertStarRail(data.data.items, remove)
         case 'Genshin':
-          return this.characters = convertGenshin(data.data.items, remove)
+          return this.characters = convertGenshin(data.data.items, 'character', remove)
       }
 
 
@@ -73,7 +81,7 @@ export const useGachaStore = defineStore('gacha', {
         case 'StarRail':
           return this.weapons = convertStarRail(data.data.items, remove)
         case 'Genshin':
-          return this.weapons = convertGenshin(data.data.items, remove)
+          return this.weapons = convertGenshin(data.data.items, 'weapon', remove)
       }
     }
   },

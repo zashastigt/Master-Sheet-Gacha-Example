@@ -8,7 +8,7 @@ export function convertToObject(array) {
 }
 
 export function filterObject(item, remove) {
-  return Object.keys(item).filter(key => !remove.includes(Number(key))).reduce((obj, key) => {
+  return Object.keys(item).filter(key => !remove.includes(key)).reduce((obj, key) => {
     return {
       ...obj, [key]: item[key]
     }

@@ -4,6 +4,7 @@ import {onUpdated, ref} from "vue";
 import SearchBar from "@/components/SearchBar.vue";
 import Filter from "@/components/Filter.vue";
 import {replaceChar} from "@/data/manipulation.ts";
+import Header from "@/components/header.vue";
 
 const props = defineProps({
   game: String,
@@ -20,21 +21,22 @@ const props = defineProps({
   itemGroup: String
 })
 
-
-
 defineEmits(['switchList'])
 
 
 </script>
 
 <template>
-<Filter
-  :listShown="listShown"
-  :elements="elements"
-  :element-src="elementSrc"
-/>
+
 <div id="container">
+
+  <Filter
+    :listShown="listShown"
+    :elements="elements"
+    :element-src="elementSrc"
+  />
   <div id="gachaPage">
+    <Header />
     <div class="switch">
       <img alt="character" :src="switchCharImg">
       <button @click="$emit('switchList')">

@@ -50,7 +50,7 @@ defineEmits(['switchList'])
                :item="item"
                :dups="dups"
                :list-shown="listShown"
-               :item-img="replaceChar(itemImg, [item.id])"
+               :item-img="replaceChar(itemImg, [item.icon])"
                :item-link="replaceChar(itemLink, [item.id, item.name])"
                :item-element="replaceChar(itemElement, [item.element])"
                :item-group="replaceChar(itemGroup, [item.group])"

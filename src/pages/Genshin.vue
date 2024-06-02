@@ -65,7 +65,6 @@ onUpdated(() => {
              :dups="store.dupsGenshin"
              :elements="elements"
              :list-shown="listShown"
-             :element-src="`https://api.ambr.top/assets/UI/UI_Buff_Element_{var1}.png`"
              :switch-char-img="`./charGI.webp`"
              :switch-weapon-img="`./weaponGI.webp`"
              :item-img="`https://api.ambr.top/assets/UI/{var1}.png`"

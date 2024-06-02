@@ -1,17 +1,18 @@
 <script setup>
 import {ref} from "vue";
 import {replaceChar} from "@/data/manipulation.ts";
+import FilterButton from "@/components/Filtering/FilterButton.vue";
 
 const props = defineProps({
   listShown: Boolean,
   elements: Array,
   groups: Array,
   elementSrc: String,
+  groupSrc: String,
   filterListElement: Array,
   filterListGroup: Array
 })
 
-let checked = ref(false)
 
 function addToFilter(item, list) {
   if (list.includes(item)) {
@@ -25,25 +26,30 @@ function addToFilter(item, list) {
   }
 }
 
+
 </script>
 
 <template>
 <div class="filters">
 
   <ul :class="`elements ${listShown ? '' : 'elementHidden'}`">
-    <label v-for="element in elements">
-      <input type="checkbox" value="" :key="element" @click="addToFilter(element, filterListElement)" @change="checked = !checked" :checked="checked">
-      <img :alt="element" :class="`element ${checked === true ? 'opaque' : ''}`" :src="`${replaceChar(elementSrc, element)}`">
-      <span>{{}}</span>
-    </label>
+    <FilterButton v-for="element in elements"
+                  :item="element"
+                  :add-to-filter="addToFilter"
+                  :replace-char="replaceChar"
+                  :filter-list-item="filterListElement"
+                  :item-src="elementSrc"
+    />
   </ul>
 
   <ul class="groups">
-    <label v-for="group in groups">
-      <input type="checkbox" value="" :key="group" @click="addToFilter(group, filterListGroup)" @change="checked = !checked" :checked="checked">
-      <img :alt="group" :class="`group ${checked === true ? 'opaque' : ''}`" :src="`${replaceChar(elementSrc, group)}`">
-      <span>{{}}</span>
-    </label>
+    <FilterButton v-for="group in groups"
+                  :item="group"
+                  :add-to-filter="addToFilter"
+                  :replace-char="replaceChar"
+                  :filter-list-item="filterListGroup"
+                  :item-src="groupSrc"
+    />
   </ul>
 
 </div>
@@ -89,40 +95,5 @@ function addToFilter(item, list) {
 .elementsHidden {
   display: none;
 }
-label {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  margin: 4px;
-  width: 70px;
-  user-select: none;
-}
 
-.element, .group {
-  min-height: 50px;
-  min-width: 50px;
-  max-height: 50px;
-  max-width: 50px;
-  opacity: 50%;
-}
-
-.element:hover, .group:hover {
-  transform: rotate(5deg);
-}
-
-.opaque {
-  opacity: 100%;
-}
-
-.group {
-  background-color: #2A2C2D;
-  border-radius: 50%;
-}
-
-input[type=checkbox] {
-  display: none;
-}
 </style>

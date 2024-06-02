@@ -1,9 +1,10 @@
 <script setup>
 import ItemBox from "@/components/Boxs/ItemBox.vue";
 import {computed, ref} from "vue";
-import Filter from "@/components/Filter.vue";
+import Filter from "@/components/Filtering/Filter.vue";
 import {replaceChar} from "@/data/manipulation.ts";
 import Header from "@/components/header.vue";
+import SearchBar from "@/components/Filtering/SearchBar.vue";
 
 const props = defineProps({
   game: String,
@@ -12,7 +13,6 @@ const props = defineProps({
   elements: Array,
   groups: Array,
   listShown: Boolean,
-  elementSrc: String,
   switchCharImg: String,
   switchWeaponImg: String,
   itemImg: String,
@@ -43,11 +43,13 @@ const list = computed(() => {
 <template>
 
 <div id="container">
+  <SearchBar />
   <Filter
     :listShown="listShown"
     :elements="elements"
     :groups="groups"
-    :element-src="elementSrc"
+    :element-src="itemElement"
+    :group-src="itemGroup"
     :filter-list-element="filterListElement"
     :filter-list-group="filterListGroup"
   />

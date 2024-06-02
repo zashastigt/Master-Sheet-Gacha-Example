@@ -4,6 +4,7 @@
 import {ref} from "vue";
 
 let searchValue = ref('')
+console.log(searchValue.value)
 </script>
 
 <template>

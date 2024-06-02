@@ -1,8 +1,5 @@
 <script setup>
-import {onBeforeMount, onUpdated} from "vue";
-import {useGachaStore} from "@/data/fetchData.ts";
-
-const store = useGachaStore()
+import {computed} from "vue";
 
 const props = defineProps({
   game: String,
@@ -25,15 +22,15 @@ function ceColor(CE) {
   }
 }
 
-function rarity(rarity) {
-  if (rarity === 5) {
+const rarityColor = computed(() => {
+  if (props.item.rarity === 5) {
     return 'rarityFiveStar'
-  } else if (rarity === 4) {
+  } else if (props.item.rarity === 4) {
     return 'rarityFourStar'
   } else {
     return 'rarityThreeStar'
   }
-}
+})
 
 </script>
 
@@ -45,7 +42,7 @@ function rarity(rarity) {
         <img class="imgItem" alt="img" :src="itemImg">
       </a>
     </div>
-    <div :class="`rarityStrip ${rarity(item.rarity)}`"></div>
+    <div :class="`rarityStrip ${rarityColor}`"></div>
     <div class="info">
       <img v-if="listShown" class="element" alt="element" :src="itemElement">
       <img class="group" alt="group" :src="itemGroup">

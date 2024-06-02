@@ -5,10 +5,25 @@ import {replaceChar} from "@/data/manipulation.ts";
 const props = defineProps({
   listShown: Boolean,
   elements: Array,
-  elementSrc: String
+  groups: Array,
+  elementSrc: String,
+  filterListElement: Array,
+  filterListGroup: Array
 })
 
 let checked = ref(false)
+
+function addToFilter(item, list) {
+  if (list.includes(item)) {
+    for (let i = 0; i < list.length; i++) {
+      if (list[i] === item) {
+        list = list.splice(i, 1)
+      }
+    }
+  } else {
+    list.push(item)
+  }
+}
 
 </script>
 
@@ -17,16 +32,16 @@ let checked = ref(false)
 
   <ul :class="`elements ${listShown ? '' : 'elementHidden'}`">
     <label v-for="element in elements">
-      <input type="checkbox" value="" @change="checked = !checked" :checked="checked">
+      <input type="checkbox" value="" :key="element" @click="addToFilter(element, filterListElement)" @change="checked = !checked" :checked="checked">
       <img :alt="element" :class="`element ${checked === true ? 'opaque' : ''}`" :src="`${replaceChar(elementSrc, element)}`">
       <span>{{}}</span>
     </label>
   </ul>
 
-  <ul class="weapons">
-    <label>
-      <input type="checkbox" value="" @change="" :checked="checked">
-      <img alt="#" :class="`element`" :src="``">
+  <ul class="groups">
+    <label v-for="group in groups">
+      <input type="checkbox" value="" :key="group" @click="addToFilter(group, filterListGroup)" @change="checked = !checked" :checked="checked">
+      <img :alt="group" :class="`group ${checked === true ? 'opaque' : ''}`" :src="`${replaceChar(elementSrc, group)}`">
       <span>{{}}</span>
     </label>
   </ul>
@@ -44,7 +59,7 @@ let checked = ref(false)
   z-index: 2;
 }
 
-.elements, .weapons {
+.elements, .groups {
   display: flex;
   justify-content: space-between;
   background-color: #222324;
@@ -64,7 +79,7 @@ let checked = ref(false)
   border-radius: 0 0 15px 0;
 }
 
-.weapons {
+.groups {
   right: 0;
   border-top: none;
   border-right: none;
@@ -86,7 +101,7 @@ label {
   user-select: none;
 }
 
-.element, .weapon {
+.element, .group {
   min-height: 50px;
   min-width: 50px;
   max-height: 50px;
@@ -94,7 +109,7 @@ label {
   opacity: 50%;
 }
 
-.element:hover, .weapon:hover {
+.element:hover, .group:hover {
   transform: rotate(5deg);
 }
 
@@ -102,7 +117,7 @@ label {
   opacity: 100%;
 }
 
-.weapon {
+.group {
   background-color: #2A2C2D;
   border-radius: 50%;
 }

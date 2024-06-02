@@ -1,7 +1,6 @@
 <script setup>
 import ItemBox from "@/components/Boxs/ItemBox.vue";
-import {onUpdated, ref} from "vue";
-import SearchBar from "@/components/SearchBar.vue";
+import {computed, ref} from "vue";
 import Filter from "@/components/Filter.vue";
 import {replaceChar} from "@/data/manipulation.ts";
 import Header from "@/components/header.vue";
@@ -11,6 +10,7 @@ const props = defineProps({
   items: Object,
   dups: Object,
   elements: Array,
+  groups: Array,
   listShown: Boolean,
   elementSrc: String,
   switchCharImg: String,
@@ -23,29 +23,45 @@ const props = defineProps({
 
 defineEmits(['switchList'])
 
+const sliderPosition = computed(() => props.listShown ? 'sliderLeft' : 'sliderRight')
+
+let filterListElement = ref([])
+let filterListGroup = ref([])
+
+const list = computed(() => {
+  let sortedList = props.items
+    .sort((a, b) => a.element.localeCompare(b.element))
+    .sort((a, b) => b.rarity - a.rarity)
+
+  return sortedList.filter(item =>
+      (filterListElement.value.length === 0 || filterListElement.value.includes(item.element)) &&
+      (filterListGroup.value.length === 0 || filterListGroup.value.includes(item.group)))
+})
 
 </script>
 
 <template>
 
 <div id="container">
-
   <Filter
     :listShown="listShown"
     :elements="elements"
+    :groups="groups"
     :element-src="elementSrc"
+    :filter-list-element="filterListElement"
+    :filter-list-group="filterListGroup"
   />
   <div id="gachaPage">
     <Header />
     <div class="switch">
       <img alt="character" :src="switchCharImg">
       <button @click="$emit('switchList')">
-        <div :class="`slider ${listShown ? 'sliderLeft' : 'sliderRight'}`"></div>
+        <div :class="`slider ${sliderPosition}`"></div>
       </button>
       <img alt="weapon" :src="switchWeaponImg">
     </div>
     <div class="itemList">
-      <ItemBox v-for="item in items"
+      <ItemBox v-for="item in list"
                :game="'StarRail'"
                :item="item"
                :dups="dups"

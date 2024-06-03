@@ -11,6 +11,7 @@ const props = defineProps({
   game: String,
   items: Object,
   dups: Object,
+  pity: Array,
   elements: Array,
   groups: Array,
   listShown: Boolean,
@@ -66,7 +67,9 @@ const list = computed(() => {
         <SearchBar v-model:search-value="filterSearch" />
     </div>
     <div class="itemList">
-      <PityBox />
+      <PityBox
+        :pity="pity"
+      />
       <ItemBox
         v-for="item in list"
         :key="item.id"

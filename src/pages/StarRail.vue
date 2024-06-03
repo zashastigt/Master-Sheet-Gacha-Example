@@ -6,8 +6,8 @@ import {useGachaStore} from "@/data/fetchData.ts";
 const listShown = ref(true)
 const elements = ["Physical", "Fire", "Ice", "Thunder", "Wind", "Quantum", "Imaginary"]
 const groups = ['Priest', 'Warrior', 'Mage', 'Shaman', 'Rogue', 'Warlock', 'Knight']
-const store = useGachaStore()
 
+const store = useGachaStore()
 store.getCharacterInfo(`https://api.yatta.top/hsr/v2/en/avatar`, 'StarRail', ['8001', '8003', '8005', '8007', '8009', '8011', '8013'])
 store.getWeaponInfo(`https://api.yatta.top/hsr/v2/en/equipment`, 'StarRail', [])
 store.getSheetDataStarRail()
@@ -27,6 +27,7 @@ function trailblazerFix() {
              :game="'StarRail'"
              :items="listShown ? trailblazerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsStarRail"
+             :pity="store.dupsStarRail?.SRPity"
              :elements="elements"
              :groups="groups"
              :list-shown="listShown"

@@ -45,7 +45,7 @@ export const useGachaStore = defineStore('gacha', {
     dupsStarRail: null,
     dupsGenshin: null,
     characters: {},
-    weapons: {}
+    weapons: {},
   }),
   actions: {
     async getSheetDataStarRail() {
@@ -69,7 +69,6 @@ export const useGachaStore = defineStore('gacha', {
         case 'Genshin':
           return this.characters = convertGenshin(data.data.items, 'character', remove)
       }
-
     },
     async getWeaponInfo(url, game, remove) {
       const res = await fetch(url)

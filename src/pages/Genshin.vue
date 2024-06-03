@@ -39,6 +39,7 @@ function travelerFix() {
              :game="'Genshin'"
              :items="listShown ? travelerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsGenshin"
+             :pity="store.dupsGenshin.GIPity"
              :elements="elements"
              :groups="groups"
              :list-shown="listShown"

@@ -47,7 +47,7 @@ const rarityColor = computed(() => {
       <img class="group" alt="group" :src="itemGroup">
     </div>
     <div class="itemCE">
-      <div class="CE" v-if="dups" v-for="(CE, key) in listShown ? dups.Characters[item.name].CE : dups.Weapons[item.name].CE">
+      <div class="CE" v-if="dups" v-for="(CE, key) in listShown ? dups.Characters[item.name]?.CE : dups.Weapons[item.name]?.CE">
         <div class="personName">{{key}}</div>
         <div class="CECount" :class="ceColor(CE)">{{CE}}</div>
         <div class="buttons">

@@ -1,6 +1,3 @@
-- Search Bar toevoegen aan filter
-- Search Bar beter stylen
 - Pity Box toevoegen en deze beter stylen
 - Post Data toevoegen voor het updaten van de spread Sheet
 - Wuthering Waves toevoegen
-- het switchen van pagina's verbeteren zodat hij niet crashed als je te snel tussen pagina's switched

@@ -5,6 +5,7 @@ import Filter from "@/components/Filtering/Filter.vue";
 import {replaceChar} from "@/data/manipulation.ts";
 import Header from "@/components/header.vue";
 import SearchBar from "@/components/Filtering/SearchBar.vue";
+import PityBox from "@/components/Boxs/PityBox.vue";
 
 const props = defineProps({
   game: String,
@@ -30,7 +31,8 @@ let filterListGroup = ref([])
 let filterSearch =ref('')
 
 const list = computed(() => {
-  let sortedList = props.items
+  let itemList = props.items
+  let sortedList = itemList
     .sort((a, b) => props.listShown ? a.element.localeCompare(b.element) : a.group.localeCompare(b.group))
     .sort((a, b) => b.rarity - a.rarity)
   return sortedList.filter(item =>
@@ -64,15 +66,18 @@ const list = computed(() => {
         <SearchBar v-model:search-value="filterSearch" />
     </div>
     <div class="itemList">
-      <ItemBox v-for="item in list"
-               :game="'StarRail'"
-               :item="item"
-               :dups="dups"
-               :list-shown="listShown"
-               :item-img="replaceChar(itemImg, [item.icon])"
-               :item-link="replaceChar(itemLink, [item.id, item.name])"
-               :item-element="replaceChar(itemElement, [item.element])"
-               :item-group="replaceChar(itemGroup, [item.group])"
+      <PityBox />
+      <ItemBox
+        v-for="item in list"
+        :key="item.id"
+        :game="'StarRail'"
+        :item="item"
+        :dups="dups"
+        :list-shown="listShown"
+        :item-img="replaceChar(itemImg, [item.icon])"
+        :item-link="replaceChar(itemLink, [item.id, item.name])"
+        :item-element="replaceChar(itemElement, [item.element])"
+        :item-group="replaceChar(itemGroup, [item.group])"
       />
     </div>
   </div>

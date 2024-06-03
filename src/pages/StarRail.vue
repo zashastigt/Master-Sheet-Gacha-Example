@@ -10,8 +10,6 @@ const store = useGachaStore()
 
 store.getCharacterInfo(`https://api.yatta.top/hsr/v2/en/avatar`, 'StarRail', ['8001', '8003', '8005', '8007', '8009', '8011', '8013'])
 store.getWeaponInfo(`https://api.yatta.top/hsr/v2/en/equipment`, 'StarRail', [])
-
-
 store.getSheetDataStarRail()
 
 function trailblazerFix() {
@@ -22,16 +20,12 @@ function trailblazerFix() {
     return item
   })
 }
-
-
-
-
 </script>
 
 <template>
   <GachaPage v-if="trailblazerFix(store.characters)"
              :game="'StarRail'"
-             :items="listShown ? trailblazerFix(store.characters) : store.weapons"
+             :items="listShown ? trailblazerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsStarRail"
              :elements="elements"
              :groups="groups"

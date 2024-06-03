@@ -31,7 +31,6 @@ const rarityColor = computed(() => {
     return 'rarityThreeStar'
   }
 })
-
 </script>
 
 <template>

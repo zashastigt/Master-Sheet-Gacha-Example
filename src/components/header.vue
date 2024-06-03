@@ -1,8 +1,4 @@
 <script setup>
-import {ref} from "vue";
-
-const showMenu = ref(false)
-
 
 </script>
 

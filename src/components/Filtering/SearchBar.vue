@@ -1,29 +1,23 @@
-
-
 <script setup>
-import {ref} from "vue";
-
-let searchValue = ref('')
-console.log(searchValue.value)
+const searchValue = defineModel('searchValue')
 </script>
 
 <template>
-<input class="search" type="text" autofocus :value="searchValue" @change="e => searchValue = e.target.value">
+<input class="search" placeholder="Search" v-model="searchValue">
 </template>
 
 <style scoped>
 .search {
   display: flex;
-  width: 35%;
-  background-color: #222324;
+  width: 100%;
+  background-color: #333;
   border: none;
   border-radius: 25px;
-  padding: 0.75em;
+  padding: 1px 0;
+  margin-top: 3px;
   color: #787168;
-  font-size: 18px;
-  position: fixed;
-  top: 2.75em;
-  align-self: flex-start;
+  font-size: 16px;
+  align-self: center;
   text-align: center;
 }
 </style>

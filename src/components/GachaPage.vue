@@ -27,23 +27,21 @@ const sliderPosition = computed(() => props.listShown ? 'sliderLeft' : 'sliderRi
 
 let filterListElement = ref([])
 let filterListGroup = ref([])
+let filterSearch =ref('')
 
 const list = computed(() => {
   let sortedList = props.items
-    .sort((a, b) => a.element.localeCompare(b.element))
+    .sort((a, b) => props.listShown ? a.element.localeCompare(b.element) : a.group.localeCompare(b.group))
     .sort((a, b) => b.rarity - a.rarity)
-
   return sortedList.filter(item =>
-      (filterListElement.value.length === 0 || filterListElement.value.includes(item.element)) &&
-      (filterListGroup.value.length === 0 || filterListGroup.value.includes(item.group)))
+    (filterListElement.value.length === 0 || filterListElement.value.includes(item.element)) &&
+    (filterListGroup.value.length === 0 || filterListGroup.value.includes(item.group)) &&
+    (filterSearch.value.length === 0 || item.name.toLowerCase().includes(filterSearch.value.toLowerCase())))
 })
-
 </script>
 
 <template>
-
 <div id="container">
-  <SearchBar />
   <Filter
     :listShown="listShown"
     :elements="elements"
@@ -56,11 +54,14 @@ const list = computed(() => {
   <div id="gachaPage">
     <Header />
     <div class="switch">
-      <img alt="character" :src="switchCharImg">
-      <button @click="$emit('switchList')">
-        <div :class="`slider ${sliderPosition}`"></div>
-      </button>
-      <img alt="weapon" :src="switchWeaponImg">
+      <div>
+        <img alt="character" :src="switchCharImg">
+        <button @click="$emit('switchList')">
+          <div :class="`slider ${sliderPosition}`"></div>
+        </button>
+        <img alt="weapon" :src="switchWeaponImg">
+      </div>
+        <SearchBar v-model:search-value="filterSearch" />
     </div>
     <div class="itemList">
       <ItemBox v-for="item in list"
@@ -76,7 +77,6 @@ const list = computed(() => {
     </div>
   </div>
 </div>
-
 </template>
 
 <style scoped>
@@ -102,10 +102,9 @@ const list = computed(() => {
   outline: none;
 }
 
-
-
 .switch {
   display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: #222324;
   padding: 5px 10px;
@@ -113,6 +112,11 @@ const list = computed(() => {
   border: solid 3px #787168;
   border-radius: 0 0 15px 15px;
   border-top: 0;
+}
+
+.switch > div {
+  display: flex;
+  align-items: center;
 }
 
 .switch button {
@@ -152,8 +156,6 @@ const list = computed(() => {
   border-radius: 50%;
   background-color: blueviolet;
 }
-
-
 
 .characters {
   display: flex;

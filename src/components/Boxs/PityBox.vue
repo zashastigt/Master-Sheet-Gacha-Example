@@ -1,123 +1,267 @@
 <script setup>
 import {onUpdated, ref} from "vue";
-import {convertToObject} from "@/data/manipulation.ts";
 
 const props = defineProps({
   pity: Array
 })
 
+
+const testPity = {
+  'Star Rail': {
+    Zasha: {
+      character: {
+        'star4': 6,
+        'star5': 2,
+        guarantee: "Yes"
+      },
+      weapon: {
+        'star4': 2,
+        'star5': 65
+      },
+      regular: {
+        'star4': 3,
+        'star5': 34
+      },
+    },
+    Wilco: {
+      character: {
+        'star4': 9,
+        'star5': 24,
+        guarantee: "No"
+      },
+      weapon: {
+        'star4': 4,
+        'star5': 60
+      },
+      regular: {
+        'star4': 7,
+        'star5': 14
+      },
+    },
+    Wilfred: {
+      character: {
+        'star4': 0,
+        'star5': 89,
+        guarantee: "No"
+      },
+      weapon: {
+        'star4': 1,
+        'star5': 0
+      },
+      regular: {
+        'star4': 7,
+        'star5': 33
+      },
+    },
+    Rick: {
+      character: {
+        'star4': 3,
+        'star5': 78,
+        guarantee: "No"
+      },
+      weapon: {
+        'star4': 2,
+        'star5': 42
+      },
+      regular: {
+        'star4': 6,
+        'star5': 72
+      },
+    },
+  },
+  Genshin: {
+    Zasha: {
+      character: {
+        'star4': 6,
+        'star5': 2,
+        guarantee: "Yes"
+      },
+      weapon: {
+        'star4': 2,
+        'star5': 65
+      },
+      regular: {
+        'star4': 3,
+        'star5': 34
+      },
+    },
+    Wilco: {
+      character: {
+        'star4': 9,
+        'star5': 24,
+        guarantee: "No"
+      },
+      weapon: {
+        'star4': 4,
+        'star5': 60
+      },
+      regular: {
+        'star4': 7,
+        'star5': 14
+      },
+    },
+    Wilfred: {
+      character: {
+        'star4': 0,
+        'star5': 89,
+        guarantee: "No"
+      },
+      weapon: {
+        'star4': 1,
+        'star5': 0
+      },
+      regular: {
+        'star4': 7,
+        'star5': 33
+      },
+    },
+    Rick: {
+      character: {
+        'star4': 3,
+        'star5': 78,
+        guarantee: "No"
+      },
+      weapon: {
+        'star4': 2,
+        'star5': 42
+      },
+      regular: {
+        'star4': 6,
+        'star5': 72
+      },
+    },
+  }
+}
+const selectedPerson = ref('')
+console.log(testPity['Star Rail'])
 onUpdated(() => {
   console.log(props.pity)
 })
 
-const selectedPerson = ref('')
+
 
 </script>
 
 <template>
-<div class="box">
-  <div class="container" v-if="!selectedPerson">
-    <div>
-      <div>&nbsp</div>
-      <div>Normal</div>
-      <div>Weapon</div>
-      <div>Event</div>
-      <div>50/50</div>
-    </div>
-    <div class="pityInfo" v-for="person in pity">
-      <div>{{ person.Name }}</div>
-      <div class="pity">
-        <div class="pityColumn color5">
-          <span>{{ person.Regular }}</span>
-          <span>{{ person.Weapon }}</span>
-          <span>{{ person.Character }}</span>
-        </div>
-        <div class="pityColumn color4">
-          <span>{{ person.Regular4 }}</span>
-          <span>{{ person.Weapon4 }}</span>
-          <span>{{ person.Character4 }}</span>
+<div class="container" v-if="!selectedPerson">
+  <div class="gameBox" v-for="(game, gameKey) in testPity">
+    <span>{{ gameKey }}</span>
+    <div class="testBox2">
+      <div class="personBox" v-for="(person, personKey) in game">
+        <span>{{ personKey }}</span>
+        <div class="testBox">
+          <div class="typeBox" v-for="(type, typeKey) in person">
+            <span>{{ typeKey }}</span>
+            <div class="pityBox">
+              <span class="color4">{{ type.star4 }}</span>
+              <span class="color5">{{ type.star5 }}</span>
+            </div>
+            <button class="plusButton">+1</button>
+            <div class="buttonBox">
+              <button class="color4">r4</button>
+              <button class="color5">r5</button>
+            </div>
+            <span>{{ type.guarantee }}</span>
+          </div>
         </div>
       </div>
-      <span>{{ person.Guarantee }}</span>
     </div>
   </div>
-  <div class="container" v-if="selectedPerson">
-
-  </div>
-  <div class="boxName">Pity</div>
+  <span class="scrollText"> Scroll --></span>
 </div>
 </template>
 
 <style scoped>
-.box {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 10px;
-}
-
 .container {
   display: flex;
-  height: 100px;
-  width: fit-content;
-  background-color: #252525;
-  border-radius: 20px 20px 20px 0;
-  border: #333333 solid 3px;
-  padding: 0 10px;
-  margin-right: 26px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  overflow: scroll;
 }
 
-.boxName {
-  position: relative;
-  bottom: 0;
-  height: 1.3em;
-  padding: 0 10px;
-  width: fit-content;
-  min-width: 55px;
-  border-radius: 0 0 15px 15px;
-  text-align: center;
-  font-size: 1.1em;
-  font-weight: 400;
-  color: #ddd;
+.gameBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: #333333 2px solid;
+  border-radius: 20px;
   background-color: #333333;
 }
 
-.pityInfo {
+.testBox2 {
+  display: flex;
+}
+
+.personBox {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 10px;
 }
 
-.pity {
+.testBox {
   display: flex;
-  width: 50px;
+}
+
+.typeBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 2px;
-  border-radius: 5px;
 }
 
-.pityColumn {
+.pityBox {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+}
 
-  color: #000;
+.pityBox > span {
   width: 50%;
+  text-align: center;
+}
+
+.plusButton {
+  width: 100%;
+  border: 0;
+  border-radius: 50px;
+  background-color: #bbb;
+}
+
+.buttonBox {
+  display: flex;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.buttonBox > button {
+  width: 50%;
+  border: 0;
+  border-radius: 50px;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 .color4 {
   background-color: rgba(148, 112, 187);
+  color: black;
 }
 
 .color5 {
   background-color: rgba(200, 124, 36);
+  color: black;
 }
 
-.noColor {
-  background-color: #252525;
+.scrollText {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(90deg);
 }
-
-.aColor {
-  background-color: #333333;
-}
-
 
 </style>

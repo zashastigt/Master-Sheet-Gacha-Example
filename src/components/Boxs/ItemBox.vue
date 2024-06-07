@@ -31,6 +31,13 @@ const rarityColor = computed(() => {
     return 'rarityThreeStar'
   }
 })
+
+function changeLevel(direction, name, CE) {
+  console.log(direction)
+  console.log(name)
+  console.log(CE)
+}
+
 </script>
 
 <template>
@@ -51,8 +58,10 @@ const rarityColor = computed(() => {
         <div class="personName">{{key}}</div>
         <div class="CECount" :class="ceColor(CE)">{{CE}}</div>
         <div class="buttons">
-          <button class="up" v-if="listShown ? !CE.includes('6') : !CE.includes('5')">+</button>
-          <button class="down" v-if="CE !== ''">-</button>
+          <button
+            class="up"
+            @click="changeLevel('up', listShown ? dups.Characters[item.name]?.Name : dups.Weapons[item.name]?.Name, CE)" v-if="listShown ? !CE.includes('6') : !CE.includes('5')">+</button>
+          <button class="down" @click="changeLevel('down', listShown ? dups.Characters[item.name]?.Name : dups.Weapons[item.name]?.Name, CE)" v-if="CE !== ''">-</button>
         </div>
       </div>
     </div>

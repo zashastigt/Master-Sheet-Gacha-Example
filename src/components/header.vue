@@ -1,23 +1,41 @@
 <script setup>
+import PityBox from "@/components/Boxs/PityBox.vue";
+import {ref} from "vue";
 
+const props = defineProps({
+  pity: Array
+})
+
+let showPity = ref(false)
 </script>
 
 <template>
 <div id="header">
-  <nav class="navigation">
-    <RouterLink class="link" to="/">Home</RouterLink>
-    <RouterLink class="link" to="Genshin">Genshin</RouterLink>
-    <RouterLink class="link" to="StarRail">Star Rail</RouterLink>
-    <RouterLink class="link" to="WutheringWaves">Wuthering Waves</RouterLink>
-  </nav>
+  <div class="navBar">
+    <div class="navSpacing">
+      <button class="link" @click="showPity = !showPity">Pity</button>
+    </div>
+
+    <nav class="navigation">
+      <RouterLink class="link" to="/">Home</RouterLink>
+      <RouterLink class="link" to="Genshin">Genshin</RouterLink>
+      <RouterLink class="link" to="StarRail">Star Rail</RouterLink>
+      <RouterLink class="link" to="WutheringWaves">Wuthering Waves</RouterLink>
+    </nav>
+    <div class="navSpacing">&nbsp;</div>
+  </div>
+  <PityBox
+    v-if="showPity"
+    :pity="pity"
+  />
 </div>
 </template>
 
 <style scoped>
 #header {
   display: flex;
-  width: calc(100% - 30px);
-  height: 25px;
+  flex-direction: column;
+  width: calc(100% - 100px);
   align-items: center;
   justify-content: center;
   background-color: #222324;
@@ -27,6 +45,17 @@
   border-radius: 0 0 15px 15px;
   border-top: 0;
   z-index: 2;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navSpacing {
+  width: 100px;
 }
 
 .navigation {
@@ -43,6 +72,7 @@
   height: 25px;
   margin: 0 5px;
   padding: 0 10px;
+  border: 0;
   border-radius: 7px;
   color: #ddd;
   text-decoration: none;

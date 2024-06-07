@@ -55,7 +55,9 @@ const list = computed(() => {
     :filter-list-group="filterListGroup"
   />
   <div id="gachaPage">
-    <Header />
+    <Header
+      :pity="pity"
+    />
     <div class="switch">
       <div>
         <img alt="character" :src="switchCharImg">
@@ -67,9 +69,6 @@ const list = computed(() => {
         <SearchBar v-model:search-value="filterSearch" />
     </div>
     <div class="itemList">
-      <PityBox
-        :pity="pity"
-      />
       <ItemBox
         v-for="item in list"
         :key="item.id"

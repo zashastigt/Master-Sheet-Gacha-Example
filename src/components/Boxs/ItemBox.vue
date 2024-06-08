@@ -1,16 +1,20 @@
 <script setup>
 import {computed} from "vue";
+import {postData} from "@/data/postData.ts";
 
 const props = defineProps({
   game: String,
   item: Object,
   dups: Object,
+  dubLetter: Array,
   listShown: Boolean,
   itemImg: String,
   itemLink: String,
   itemElement: String,
   itemGroup: String
 })
+
+const DEBOUNCE_TIMEOUT_MS = 1000
 
 function ceColor(CE) {
   if (CE.includes('6')) {
@@ -32,10 +36,12 @@ const rarityColor = computed(() => {
   }
 })
 
-function changeLevel(direction, name, CE) {
-  console.log(direction)
-  console.log(name)
-  console.log(CE)
+function changeLevel(direction, name, CE, person) {
+  const maxCE = props.listShown ? 6 : 5
+  const newCE = Math.max(-1, Math.min(maxCE, parseInt(CE[1] ?? -1) + direction))
+  props.dups[props.listShown ? 'Characters' : 'Weapons'][name].CE[person] = (newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '')
+
+  // postData()
 }
 
 </script>
@@ -54,14 +60,12 @@ function changeLevel(direction, name, CE) {
       <img class="group" alt="group" :src="itemGroup">
     </div>
     <div class="itemCE">
-      <div class="CE" v-if="dups" v-for="(CE, key) in listShown ? dups.Characters[item.name]?.CE : dups.Weapons[item.name]?.CE">
+      <div class="CE" v-if="dups" v-for="(CE, key) in dups[props.listShown ? 'Characters' : 'Weapons'][item.name]?.CE">
         <div class="personName">{{key}}</div>
         <div class="CECount" :class="ceColor(CE)">{{CE}}</div>
         <div class="buttons">
-          <button
-            class="up"
-            @click="changeLevel('up', listShown ? dups.Characters[item.name]?.Name : dups.Weapons[item.name]?.Name, CE)" v-if="listShown ? !CE.includes('6') : !CE.includes('5')">+</button>
-          <button class="down" @click="changeLevel('down', listShown ? dups.Characters[item.name]?.Name : dups.Weapons[item.name]?.Name, CE)" v-if="CE !== ''">-</button>
+          <button class="up" @click="changeLevel(1, dups[props.listShown ? 'Characters' : 'Weapons'][item.name]?.Name, CE, key)" v-if="listShown ? !CE.includes('6') : !CE.includes('5')">+</button>
+          <button class="down" @click="changeLevel(-1, dups[props.listShown ? 'Characters' : 'Weapons'][item.name]?.Name, CE, key)" v-if="CE !== ''">-</button>
         </div>
       </div>
     </div>

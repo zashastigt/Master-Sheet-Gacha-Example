@@ -5,7 +5,6 @@ const props = defineProps({
   pity: Array
 })
 
-
 const testPity = {
   'Star Rail': {
     Zasha: {

@@ -11,6 +11,7 @@ const props = defineProps({
   game: String,
   items: Object,
   dups: Object,
+  dupLetter: Array,
   pity: Array,
   elements: Array,
   groups: Array,
@@ -75,6 +76,7 @@ const list = computed(() => {
         :game="'StarRail'"
         :item="item"
         :dups="dups"
+        :dub-letter="dupLetter"
         :list-shown="listShown"
         :item-img="replaceChar(itemImg, [item.icon])"
         :item-link="replaceChar(itemLink, [item.id, item.name])"

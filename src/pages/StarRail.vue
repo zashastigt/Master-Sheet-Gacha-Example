@@ -27,6 +27,7 @@ function trailblazerFix() {
              :game="'StarRail'"
              :items="listShown ? trailblazerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsStarRail"
+             :dup-letter="['S', 'E']"
              :pity="store.dupsStarRail?.SRPity"
              :elements="elements"
              :groups="groups"

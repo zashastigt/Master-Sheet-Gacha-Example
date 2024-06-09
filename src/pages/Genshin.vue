@@ -41,6 +41,7 @@ function travelerFix() {
              :items="listShown ? travelerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsGenshin"
              :pity="store.dupsGenshin?.GIPity"
+             :dup-letter="['R', 'C']"
              :elements="elements"
              :groups="groups"
              :list-shown="listShown"

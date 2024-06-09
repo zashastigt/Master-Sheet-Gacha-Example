@@ -6,7 +6,7 @@ const props = defineProps({
   pity: Array
 })
 
-let showPity = ref(false)
+let showPity = ref(true)
 </script>
 
 <template>

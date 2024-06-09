@@ -5,7 +5,7 @@ const props = defineProps({
   pity: Array
 })
 
-const testPity = {
+const testPity = ref({
   'Star Rail': {
     Zasha: {
       character: {
@@ -130,19 +130,11 @@ const testPity = {
       },
     },
   }
-}
-const selectedPerson = ref('')
-console.log(testPity['Star Rail'])
-onUpdated(() => {
-  console.log(props.pity)
 })
-
-
-
 </script>
 
 <template>
-<div class="container" v-if="!selectedPerson">
+<div class="container">
   <div class="gameBox" v-for="(game, gameKey) in testPity">
     <span>{{ gameKey }}</span>
     <div class="testBox2">
@@ -155,10 +147,10 @@ onUpdated(() => {
               <span class="color4">{{ type.star4 }}</span>
               <span class="color5">{{ type.star5 }}</span>
             </div>
-            <button class="plusButton">+1</button>
+            <button class="plusButton" @click="testPity[gameKey][personKey][typeKey].star4 += 1; testPity[gameKey][personKey][typeKey].star5 += 1">+1</button>
             <div class="buttonBox">
-              <button class="color4">r4</button>
-              <button class="color5">r5</button>
+              <button class="color4" @click="testPity[gameKey][personKey][typeKey].star4 = 0"><img class="resetButton" :src="`./reset.png`" alt="reset"></button>
+              <button class="color5" @click="testPity[gameKey][personKey][typeKey].star4 = 0; testPity[gameKey][personKey][typeKey].star5 = 0" ><img class="resetButton" :src="`./reset.png`" alt="reset"></button>
             </div>
             <span>{{ type.guarantee }}</span>
           </div>
@@ -244,6 +236,10 @@ onUpdated(() => {
 
 button:hover {
   transform: scale(1.1);
+}
+
+.resetButton {
+  height: 10px;
 }
 
 .color4 {

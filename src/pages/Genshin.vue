@@ -5,12 +5,14 @@ import {useGachaStore} from "@/data/fetchData.ts";
 
 const listShown = ref(true)
 const elements = ["Fire", "Ice", "Water", "Electric", "Wind", "Rock", "Grass"]
+const sheetElements = ["Pyro", "Cryo", "Hydro", "Electro", "Anemo", "Geo", "Dendro"]
 const groups = ["Sword", "Pole", "Claymore", "Catalyst", "Bow"]
+const sheetGroups = ["Sword", "Polearm", "Claymore", "Catalyst", "Bow"]
 
 const store = useGachaStore()
 store.getCharacterInfo(`https://api.ambr.top/v2/en/avatar`, 'Genshin', ['10000005-pyro', '10000005-cryo', '10000005-hydro', '10000005-electro', '10000005-anemo', '10000005-geo', '10000005-dendro',])
 store.getWeaponInfo(`https://api.ambr.top/v2/en/weapon`, 'Genshin', ['11101', '11201', '12101', '12201', '13101', '13201', '14101', '14201', '15101', '15201'])
-store.getSheetDataGenshin()
+store.getSheetData()
 
 function travelerFix() {
   return Object.values(store.characters).map(item => {
@@ -40,10 +42,12 @@ function travelerFix() {
              :game="'Genshin'"
              :items="listShown ? travelerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsGenshin"
-             :pity="store.dupsGenshin?.GIPity"
+             :pity="store.pity?.Genshin"
              :dup-letter="['R', 'C']"
              :elements="elements"
+             :sheet-elements="sheetElements"
              :groups="groups"
+             :sheet-groups="sheetGroups"
              :list-shown="listShown"
              :switch-char-img="`./charGI.webp`"
              :switch-weapon-img="`./weaponGI.webp`"

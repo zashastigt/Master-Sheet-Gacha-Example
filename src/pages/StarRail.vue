@@ -5,12 +5,14 @@ import {useGachaStore} from "@/data/fetchData.ts";
 
 const listShown = ref(true)
 const elements = ["Physical", "Fire", "Ice", "Thunder", "Wind", "Quantum", "Imaginary"]
+const sheetElements = ["Physical", "Fire", "Ice", "Thunder", "Wind", "Quantum", "Imaginary"]
 const groups = ['Priest', 'Warrior', 'Mage', 'Shaman', 'Rogue', 'Warlock', 'Knight']
+const sheetGroups = ['Abundance', 'Destruction', 'Erudition', 'Harmony', 'Hunt', 'Nihility', 'Preservation']
 
 const store = useGachaStore()
 store.getCharacterInfo(`https://api.yatta.top/hsr/v2/en/avatar`, 'StarRail', ['8001', '8003', '8005', '8007', '8009', '8011', '8013'])
 store.getWeaponInfo(`https://api.yatta.top/hsr/v2/en/equipment`, 'StarRail', [])
-store.getSheetDataStarRail()
+store.getSheetData()
 
 function trailblazerFix() {
   return Object.values(store.characters).map(item => {
@@ -20,6 +22,7 @@ function trailblazerFix() {
     return item
   })
 }
+
 </script>
 
 <template>
@@ -28,9 +31,11 @@ function trailblazerFix() {
              :items="listShown ? trailblazerFix(store.characters) : Object.values(store.weapons)"
              :dups="store.dupsStarRail"
              :dup-letter="['S', 'E']"
-             :pity="store.dupsStarRail?.SRPity"
+             :pity="store.pity?.StarRail"
              :elements="elements"
+             :sheet-elements="sheetElements"
              :groups="groups"
+             :sheet-groups="sheetGroups"
              :list-shown="listShown"
              :switch-char-img="`./charSR.webp`"
              :switch-weapon-img="`./weaponSR.webp`"

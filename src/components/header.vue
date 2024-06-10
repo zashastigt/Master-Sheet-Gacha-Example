@@ -3,10 +3,11 @@ import PityBox from "@/components/Boxs/PityBox.vue";
 import {ref} from "vue";
 
 const props = defineProps({
-  pity: Array
+  pity: Object,
+  game: String
 })
 
-let showPity = ref(true)
+let showPity = ref(false)
 </script>
 
 <template>
@@ -27,6 +28,7 @@ let showPity = ref(true)
   <PityBox
     v-if="showPity"
     :pity="pity"
+    :game="game"
   />
 </div>
 </template>

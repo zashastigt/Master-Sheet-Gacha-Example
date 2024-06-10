@@ -1,164 +1,56 @@
 <script setup>
 import {onUpdated, ref} from "vue";
+import {postData} from "@/data/postData.ts";
 
 const props = defineProps({
-  pity: Array
+  pity: Object,
+  game: String
 })
 
-const testPity = ref({
-  'Star Rail': {
-    Zasha: {
-      character: {
-        'star4': 6,
-        'star5': 2,
-        guarantee: "Yes"
-      },
-      weapon: {
-        'star4': 2,
-        'star5': 65
-      },
-      regular: {
-        'star4': 3,
-        'star5': 34
-      },
-    },
-    Wilco: {
-      character: {
-        'star4': 9,
-        'star5': 24,
-        guarantee: "No"
-      },
-      weapon: {
-        'star4': 4,
-        'star5': 60
-      },
-      regular: {
-        'star4': 7,
-        'star5': 14
-      },
-    },
-    Wilfred: {
-      character: {
-        'star4': 0,
-        'star5': 89,
-        guarantee: "No"
-      },
-      weapon: {
-        'star4': 1,
-        'star5': 0
-      },
-      regular: {
-        'star4': 7,
-        'star5': 33
-      },
-    },
-    Rick: {
-      character: {
-        'star4': 3,
-        'star5': 78,
-        guarantee: "No"
-      },
-      weapon: {
-        'star4': 2,
-        'star5': 42
-      },
-      regular: {
-        'star4': 6,
-        'star5': 72
-      },
-    },
-  },
-  Genshin: {
-    Zasha: {
-      character: {
-        'star4': 6,
-        'star5': 2,
-        guarantee: "Yes"
-      },
-      weapon: {
-        'star4': 2,
-        'star5': 65
-      },
-      regular: {
-        'star4': 3,
-        'star5': 34
-      },
-    },
-    Wilco: {
-      character: {
-        'star4': 9,
-        'star5': 24,
-        guarantee: "No"
-      },
-      weapon: {
-        'star4': 4,
-        'star5': 60
-      },
-      regular: {
-        'star4': 7,
-        'star5': 14
-      },
-    },
-    Wilfred: {
-      character: {
-        'star4': 0,
-        'star5': 89,
-        guarantee: "No"
-      },
-      weapon: {
-        'star4': 1,
-        'star5': 0
-      },
-      regular: {
-        'star4': 7,
-        'star5': 33
-      },
-    },
-    Rick: {
-      character: {
-        'star4': 3,
-        'star5': 78,
-        guarantee: "No"
-      },
-      weapon: {
-        'star4': 2,
-        'star5': 42
-      },
-      regular: {
-        'star4': 6,
-        'star5': 72
-      },
-    },
-  }
+console.log(props.pity)
+onUpdated(()=>{
+  console.log(props.pity)
 })
+function changePity(person, game, pity) {
+  console.log({
+    name: person,
+    gameName: game,
+    pity: pity
+  })
+  postData({
+    name: person,
+    gameName: game,
+    pity: pity
+  })
+}
+
 </script>
 
 <template>
-<div class="container">
-  <div class="gameBox" v-for="(game, gameKey) in testPity">
-    <span>{{ gameKey }}</span>
-    <div class="testBox2">
-      <div class="personBox" v-for="(person, personKey) in game">
-        <span>{{ personKey }}</span>
-        <div class="testBox">
-          <div class="typeBox" v-for="(type, typeKey) in person">
-            <span>{{ typeKey }}</span>
-            <div class="pityBox">
-              <span class="color4">{{ type.star4 }}</span>
-              <span class="color5">{{ type.star5 }}</span>
-            </div>
-            <button class="plusButton" @click="testPity[gameKey][personKey][typeKey].star4 += 1; testPity[gameKey][personKey][typeKey].star5 += 1">+1</button>
-            <div class="buttonBox">
-              <button class="color4" @click="testPity[gameKey][personKey][typeKey].star4 = 0"><img class="resetButton" :src="`./reset.png`" alt="reset"></button>
-              <button class="color5" @click="testPity[gameKey][personKey][typeKey].star4 = 0; testPity[gameKey][personKey][typeKey].star5 = 0" ><img class="resetButton" :src="`./reset.png`" alt="reset"></button>
-            </div>
-            <span>{{ type.guarantee }}</span>
-          </div>
+<div class="container" v-if="pity">
+  <div class="gameBox" v-for="(person, personKey) in pity">
+    <span>{{ personKey }}</span>
+    <div class="testBox">
+      <div class="typeBox" v-for="(type, typeKey) in person">
+        <span>{{ typeKey }}</span>
+        <div class="pityBox">
+          <span class="color4">{{ type.star4 }}</span>
+          <span class="color5">{{ type.star5 }}</span>
         </div>
+        <button class="plusButton" @click="pity[personKey][typeKey].star4 += 1; pity[personKey][typeKey].star5 += 1; changePity(personKey, game, pity[personKey])">+1</button>
+        <div class="buttonBox">
+          <button class="color4" @click="pity[personKey][typeKey].star4 = 0; changePity(personKey, game, pity[personKey])">
+            <img class="resetButton" :src="`./reset.png`" alt="reset">
+          </button>
+          <button class="color5" @click="pity[personKey][typeKey].star4 = 0; pity[personKey][typeKey].star5 = 0; changePity(personKey, game, pity[personKey])" >
+            <img class="resetButton" :src="`./reset.png`" alt="reset">
+          </button>
+        </div>
+        <span>{{ type.guarantee }}</span>
       </div>
     </div>
   </div>
-  <span class="scrollText"> Scroll --></span>
+  <span class="scrollText" v-if="!pity">Loading...</span>
 </div>
 </template>
 
@@ -166,8 +58,8 @@ const testPity = ref({
 .container {
   display: flex;
   position: relative;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 150px;
   overflow: scroll;
@@ -177,7 +69,7 @@ const testPity = ref({
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 0 10px;
   border: #333333 2px solid;
   border-radius: 20px;
   background-color: #333333;

@@ -5,16 +5,17 @@ import Filter from "@/components/Filtering/Filter.vue";
 import {replaceChar} from "@/data/manipulation.ts";
 import Header from "@/components/header.vue";
 import SearchBar from "@/components/Filtering/SearchBar.vue";
-import PityBox from "@/components/Boxs/PityBox.vue";
 
 const props = defineProps({
   game: String,
   items: Object,
   dups: Object,
   dupLetter: Array,
-  pity: Array,
+  pity: Object,
   elements: Array,
+  sheetElements: Array,
   groups: Array,
+  sheetGroups: Array,
   listShown: Boolean,
   switchCharImg: String,
   switchWeaponImg: String,
@@ -58,6 +59,7 @@ const list = computed(() => {
   <div id="gachaPage">
     <Header
       :pity="pity"
+      :game="game"
     />
     <div class="switch">
       <div>
@@ -77,6 +79,10 @@ const list = computed(() => {
         :item="item"
         :dups="dups"
         :dub-letter="dupLetter"
+        :elements="elements"
+        :sheet-elements="sheetElements"
+        :sheet-groups="sheetGroups"
+        :groups="groups"
         :list-shown="listShown"
         :item-img="replaceChar(itemImg, [item.icon])"
         :item-link="replaceChar(itemLink, [item.id, item.name])"

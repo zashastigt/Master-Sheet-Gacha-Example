@@ -1,20 +1,23 @@
 <script setup>
-import {computed} from "vue";
+import {computed, onUpdated} from "vue";
 import {postData} from "@/data/postData.ts";
+import {debounce} from "@/data/manipulation.ts";
 
 const props = defineProps({
   game: String,
   item: Object,
   dups: Object,
   dubLetter: Array,
+  elements: Array,
+  sheetElements: Array,
+  groups: Array,
+  sheetGroups: Array,
   listShown: Boolean,
   itemImg: String,
   itemLink: String,
   itemElement: String,
   itemGroup: String
 })
-
-const DEBOUNCE_TIMEOUT_MS = 1000
 
 function ceColor(CE) {
   if (CE.includes('6')) {
@@ -41,9 +44,31 @@ function changeLevel(direction, name, CE, person) {
   const newCE = Math.max(-1, Math.min(maxCE, parseInt(CE[1] ?? -1) + direction))
   props.dups[props.listShown ? 'Characters' : 'Weapons'][name].CE[person] = (newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '')
 
-  // postData()
-}
+  console.log({
+    Level: newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '',
+    Person: person,
+    Name: name,
+    Game: props.game,
+    Group: props.listShown ? 'Characters' : 'Weapons',
+    Element: props.item.element,
+    Rank: props.item.rarity,
+    Path: props.item.group
+  })
 
+  console.log(props.groups.indexOf(props.item.group))
+  console.log(props.sheetGroups)
+  debounce(postData({
+    level: newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '',
+    person: person,
+    name: name,
+    game: props.game,
+    group: props.listShown ? 'Character' : 'Weapon',
+    element: props.sheetElements[props.elements.indexOf(props.item.element)],
+    rank: props.item.rarity,
+    path: props.sheetGroups[props.groups.indexOf(props.item.group)]
+  }), 1000)
+
+}
 </script>
 
 <template>
@@ -90,6 +115,7 @@ function changeLevel(direction, name, CE, person) {
   display: flex;
   height: 100px;
   width: fit-content;
+  padding-right: 20px;
   background-color: #252525;
   border-radius: 20px 20px 20px 0;
   border: #333333 solid 3px;
@@ -100,6 +126,7 @@ function changeLevel(direction, name, CE, person) {
   flex-direction: column;
   align-items: center;
   width: 60px;
+
   background-color: transparent;
   border-radius: 17px 0 0 16px;
   overflow: hidden;

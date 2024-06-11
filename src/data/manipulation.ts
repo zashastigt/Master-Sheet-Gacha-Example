@@ -1,13 +1,13 @@
-export function convertToObject(array) {
-  return Object.keys(array).reduce((acc, key) => {
-    const innerObject = array[key]
+export function convertToObject(array: Object[]) {
+  return Object.keys(array).reduce((acc: Record<string, any>, key: any) => {
+    const innerObject: Record<string, any> = array[key]
     const innerKey = Object.keys(innerObject)[0]
     acc[innerKey] = innerObject[innerKey]
     return acc
   }, {})
 }
 
-export function filterObject(item, remove) {
+export function filterObject(item: Record<string, any>, remove: string[]) {
   return Object.keys(item).filter(key => !remove.includes(key)).reduce((obj, key) => {
     return {
       ...obj, [key]: item[key]
@@ -15,25 +15,12 @@ export function filterObject(item, remove) {
   }, {})
 }
 
-export const toPascalCase = str =>
+export const toPascalCase = (str: string) =>
   str
   .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-  .map(x => x.slice(0, 1).toUpperCase() + x.slice(1).toLowerCase())
+  .map((x: string) => x.slice(0, 1).toUpperCase() + x.slice(1).toLowerCase())
   .join('');
 
-export function replaceChar(link, array) {
-  return link.replace(/\{var(\d+)\}/g, (substr, idx) => array[parseInt(idx) - 1])
-}
-
-export function debounce(fn, wait){
-  let timer;
-  return function(...args){
-    if(timer) {
-      clearTimeout(timer); // clear any pre-existing timer
-    }
-    const context = this; // get the current context
-    timer = setTimeout(()=>{
-      fn.apply(context, args); // call the function if time expires
-    }, wait);
-  }
+export function replaceChar(link: string, array: string[]) {
+  return link.replace(/\{var(\d+)\}/g, (substr: string, idx: string) => array[parseInt(idx) - 1])
 }

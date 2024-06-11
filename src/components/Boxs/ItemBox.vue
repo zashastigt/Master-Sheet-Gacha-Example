@@ -57,7 +57,7 @@ function changeLevel(direction, name, CE, person) {
 
   console.log(props.groups.indexOf(props.item.group))
   console.log(props.sheetGroups)
-  debounce(postData({
+  postData({
     level: newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '',
     person: person,
     name: name,
@@ -66,7 +66,7 @@ function changeLevel(direction, name, CE, person) {
     element: props.sheetElements[props.elements.indexOf(props.item.element)],
     rank: props.item.rarity,
     path: props.sheetGroups[props.groups.indexOf(props.item.group)]
-  }), 1000)
+  })
 
 }
 </script>

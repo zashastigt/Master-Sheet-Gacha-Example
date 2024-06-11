@@ -1,7 +1,7 @@
 import {defineStore} from "pinia";
 import {convertToObject, filterObject, toPascalCase} from "./manipulation";
 
-function convertStarRail(object, remove) {
+function convertStarRail(object: Record<string, any>, remove: string[]) {
   const newObj = Object.keys(object).map(item => {
     return {
       [item]: {
@@ -17,7 +17,7 @@ function convertStarRail(object, remove) {
   return filterObject(convertToObject(newObj), remove)
 }
 
-function convertGenshin(object, type, remove) {
+function convertGenshin(object: Record<string, any>, type: string, remove: string[]) {
   const newObj = Object.keys(object).map(item => {
     let group = {}
     if (type === 'character') {
@@ -58,7 +58,7 @@ export const useGachaStore = defineStore('gacha', {
       this.dupsGenshin = await data.Genshin
       this.pity = await data.pity
     },
-    async getCharacterInfo(url, game, remove) {
+    async getCharacterInfo(url: string, game: string, remove: string[]) {
       const res = await fetch(url)
       const data = await res.json()
       switch (game) {
@@ -68,7 +68,7 @@ export const useGachaStore = defineStore('gacha', {
           return this.characters = convertGenshin(data.data.items, 'character', remove)
       }
     },
-    async getWeaponInfo(url, game, remove) {
+    async getWeaponInfo(url: string, game: string, remove :string[]) {
       const res = await fetch(url)
       const data = await res.json()
       switch (game) {

@@ -1,7 +1,6 @@
 <script setup>
 import {computed, onUpdated} from "vue";
 import {postData} from "@/data/postData.ts";
-import {debounce} from "@/data/manipulation.ts";
 
 const props = defineProps({
   game: String,

@@ -8,21 +8,12 @@ const outDir = resolve(__dirname, 'dist')
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Gacha/',
+  base: '/Master-Sheet-Gacha/',
   plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  build: {
-    assetsInlineLimit: 0,
-    outDir,
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: resolve(root, 'index.html')
-      }
-    }
-  }
+
 })

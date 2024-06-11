@@ -1,6 +1,5 @@
 <script setup>
 
-
 </script>
 
 <template>
@@ -9,7 +8,6 @@
     <RouterLink to="/StarRail"><img alt="StarRail" :src="`./Kafka_Splash_Art.png`"></RouterLink>
     <RouterLink to="/WutheringWaves"><img alt="WutheringWaves" :src="`./Yinlin_Splash_Art.png`"></RouterLink>
   </div>
-
 </template>
 
 <style scoped>

@@ -22,28 +22,28 @@ function trailblazerFix() {
     return item
   })
 }
-
 </script>
 
 <template>
-  <GachaPage v-if="trailblazerFix(store.characters)"
-             :game="'StarRail'"
-             :items="listShown ? trailblazerFix(store.characters) : Object.values(store.weapons)"
-             :dups="store.dupsStarRail"
-             :dup-letter="['S', 'E']"
-             :pity="store.pity?.StarRail"
-             :elements="elements"
-             :sheet-elements="sheetElements"
-             :groups="groups"
-             :sheet-groups="sheetGroups"
-             :list-shown="listShown"
-             :switch-char-img="`./charSR.webp`"
-             :switch-weapon-img="`./weaponSR.webp`"
-             :item-img="listShown ? `https://api.yatta.top/hsr/assets/UI/avatar/medium/{var1}.png` : `https://api.yatta.top/hsr/assets/UI/equipment/medium/{var1}.png`"
-             :item-link="listShown ? `https://hsr.yatta.top/en/archive/avatar/{var1}/{var2}` : `https://hsr.yatta.top/en/archive/equipment/{var1}/{var2}`"
-             :item-element="`https://api.yatta.top/hsr/assets/UI/attribute/IconAttribute{var1}.png`"
-             :item-group="`https://api.yatta.top/hsr/assets/UI/profession/IconProfession{var1}Small.png`"
-             @switch-list="listShown = !listShown"
+  <GachaPage
+    v-if="trailblazerFix(store.characters)"
+    :game="'StarRail'"
+    :items="listShown ? trailblazerFix(store.characters) : Object.values(store.weapons)"
+    :dups="store.dupsStarRail"
+    :dup-letter="['S', 'E']"
+    :pity="store.pity?.StarRail"
+    :elements="elements"
+    :sheet-elements="sheetElements"
+    :groups="groups"
+    :sheet-groups="sheetGroups"
+    :list-shown="listShown"
+    :switch-char-img="`./charSR.webp`"
+    :switch-weapon-img="`./weaponSR.webp`"
+    :item-img="listShown ? `https://api.yatta.top/hsr/assets/UI/avatar/medium/{var1}.png` : `https://api.yatta.top/hsr/assets/UI/equipment/medium/{var1}.png`"
+    :item-link="listShown ? `https://hsr.yatta.top/en/archive/avatar/{var1}/{var2}` : `https://hsr.yatta.top/en/archive/equipment/{var1}/{var2}`"
+    :item-element="`https://api.yatta.top/hsr/assets/UI/attribute/IconAttribute{var1}.png`"
+    :item-group="`https://api.yatta.top/hsr/assets/UI/profession/IconProfession{var1}Small.png`"
+    @switch-list="listShown = !listShown"
   />
 </template>
 

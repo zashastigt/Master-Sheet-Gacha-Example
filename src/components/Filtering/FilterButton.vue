@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from "vue";
 
-const props = defineProps({
+defineProps({
   item: String,
   addToFilter: Function,
   replaceChar: Function,
@@ -21,7 +21,6 @@ const checked = ref(false)
 </template>
 
 <style scoped>
-
 label {
   cursor: pointer;
   display: flex;

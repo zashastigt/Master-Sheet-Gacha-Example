@@ -1,5 +1,5 @@
 <script setup>
-import {onUpdated, ref} from "vue";
+import {onUpdated} from "vue";
 import {postData} from "@/data/postData.ts";
 
 const props = defineProps({
@@ -23,7 +23,6 @@ function changePity(person, game, pity) {
     pity: pity
   })
 }
-
 </script>
 
 <template>
@@ -73,17 +72,6 @@ function changePity(person, game, pity) {
   border: #333333 2px solid;
   border-radius: 20px;
   background-color: #333333;
-}
-
-.testBox2 {
-  display: flex;
-}
-
-.personBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 10px;
 }
 
 .testBox {

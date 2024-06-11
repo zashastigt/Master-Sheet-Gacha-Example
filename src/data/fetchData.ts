@@ -39,7 +39,6 @@ function convertGenshin(object: Record<string, any>, type: string, remove: strin
   return filterObject(convertToObject(newObj), remove)
 }
 
-
 export const useGachaStore = defineStore('gacha', {
   state: () => ({
     dupsStarRail: null,
@@ -78,8 +77,5 @@ export const useGachaStore = defineStore('gacha', {
           return this.weapons = convertGenshin(data.data.items, 'weapon', remove)
       }
     }
-  },
-  getters: {
-
   }
 })

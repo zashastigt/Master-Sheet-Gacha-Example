@@ -99,7 +99,6 @@ const list = computed(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 #gachaPage {
@@ -172,37 +171,10 @@ const list = computed(() => {
   background-color: blueviolet;
 }
 
-.characters {
-  display: flex;
-}
-
-.character {
-  display: flex;
-  border-style: solid;
-  border-color: #787168;
-  border-radius: 25px;
-}
-
-.playerInfo {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-items: center;
-}
-
 .itemList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-
-.weaponList {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.switchGameImage {
-  width: 35px;
-  margin-left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -215,7 +187,7 @@ const list = computed(() => {
     position: fixed;
   }
 
-  .itemList, .weaponList {
+  .itemList {
     margin-top: 100px;
   }
 }

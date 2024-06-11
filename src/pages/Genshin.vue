@@ -1,5 +1,5 @@
 <script setup>
-import {onUpdated, ref} from "vue";
+import {ref} from "vue";
 import GachaPage from "@/components/GachaPage.vue";
 import {useGachaStore} from "@/data/fetchData.ts";
 
@@ -34,28 +34,28 @@ function travelerFix() {
     return item;
   });
 }
-
 </script>
 
 <template>
-  <GachaPage v-if="store.characters"
-             :game="'Genshin'"
-             :items="listShown ? travelerFix(store.characters) : Object.values(store.weapons)"
-             :dups="store.dupsGenshin"
-             :pity="store.pity?.Genshin"
-             :dup-letter="['R', 'C']"
-             :elements="elements"
-             :sheet-elements="sheetElements"
-             :groups="groups"
-             :sheet-groups="sheetGroups"
-             :list-shown="listShown"
-             :switch-char-img="`./charGI.webp`"
-             :switch-weapon-img="`./weaponGI.webp`"
-             :item-img="`https://api.ambr.top/assets/UI/{var1}.png`"
-             :item-link="listShown ? `https://ambr.top/en/archive/avatar/{var1}/{var2}` : `https://ambr.top/en/archive/avatar/{var1}/{var2}`"
-             :item-element="`https://api.ambr.top/assets/UI/UI_Buff_Element_{var1}.png`"
-             :item-group="`https://api.ambr.top/assets/UI/UI_GachaTypeIcon_{var1}.png`"
-             @switch-list="listShown = !listShown"
+  <GachaPage
+    v-if="store.characters"
+    :game="'Genshin'"
+    :items="listShown ? travelerFix(store.characters) : Object.values(store.weapons)"
+    :dups="store.dupsGenshin"
+    :pity="store.pity?.Genshin"
+    :dup-letter="['R', 'C']"
+    :elements="elements"
+    :sheet-elements="sheetElements"
+    :groups="groups"
+    :sheet-groups="sheetGroups"
+    :list-shown="listShown"
+    :switch-char-img="`./charGI.webp`"
+    :switch-weapon-img="`./weaponGI.webp`"
+    :item-img="`https://api.ambr.top/assets/UI/{var1}.png`"
+    :item-link="listShown ? `https://ambr.top/en/archive/avatar/{var1}/{var2}` : `https://ambr.top/en/archive/avatar/{var1}/{var2}`"
+    :item-element="`https://api.ambr.top/assets/UI/UI_Buff_Element_{var1}.png`"
+    :item-group="`https://api.ambr.top/assets/UI/UI_GachaTypeIcon_{var1}.png`"
+    @switch-list="listShown = !listShown"
   />
 </template>
 

@@ -1,5 +1,5 @@
 <script setup>
-import {computed, onUpdated} from "vue";
+import {computed} from "vue";
 import {postData} from "@/data/postData.ts";
 
 const props = defineProps({
@@ -42,20 +42,6 @@ function changeLevel(direction, name, CE, person) {
   const maxCE = props.listShown ? 6 : 5
   const newCE = Math.max(-1, Math.min(maxCE, parseInt(CE[1] ?? -1) + direction))
   props.dups[props.listShown ? 'Characters' : 'Weapons'][name].CE[person] = (newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '')
-
-  console.log({
-    Level: newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '',
-    Person: person,
-    Name: name,
-    Game: props.game,
-    Group: props.listShown ? 'Characters' : 'Weapons',
-    Element: props.item.element,
-    Rank: props.item.rarity,
-    Path: props.item.group
-  })
-
-  console.log(props.groups.indexOf(props.item.group))
-  console.log(props.sheetGroups)
   postData({
     level: newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '',
     person: person,
@@ -66,7 +52,6 @@ function changeLevel(direction, name, CE, person) {
     rank: props.item.rarity,
     path: props.sheetGroups[props.groups.indexOf(props.item.group)]
   })
-
 }
 </script>
 
@@ -260,9 +245,11 @@ function changeLevel(direction, name, CE, person) {
   line-height: inherit;
   padding: 0;
 }
+
 .CE .buttons button.up{
   grid-column: 2;
 }
+
 .CE .buttons button.down{
   grid-column: 4;
 }

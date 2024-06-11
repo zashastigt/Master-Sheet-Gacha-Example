@@ -1,9 +1,8 @@
 <script setup>
-import {ref} from "vue";
 import {replaceChar} from "@/data/manipulation.ts";
 import FilterButton from "@/components/Filtering/FilterButton.vue";
 
-const props = defineProps({
+defineProps({
   listShown: Boolean,
   elements: Array,
   groups: Array,
@@ -12,7 +11,6 @@ const props = defineProps({
   filterListElement: Array,
   filterListGroup: Array
 })
-
 
 function addToFilter(item, list) {
   if (list.includes(item)) {
@@ -25,33 +23,30 @@ function addToFilter(item, list) {
     list.push(item)
   }
 }
-
-
 </script>
 
 <template>
 <div class="filters">
-
   <ul :class="`elements ${listShown ? '' : 'elementHidden'}`">
-    <FilterButton v-for="element in elements"
-                  :item="element"
-                  :add-to-filter="addToFilter"
-                  :replace-char="replaceChar"
-                  :filter-list-item="filterListElement"
-                  :item-src="elementSrc"
+    <FilterButton
+      v-for="element in elements"
+      :item="element"
+      :add-to-filter="addToFilter"
+      :replace-char="replaceChar"
+      :filter-list-item="filterListElement"
+      :item-src="elementSrc"
     />
   </ul>
-
   <ul class="groups">
-    <FilterButton v-for="group in groups"
-                  :item="group"
-                  :add-to-filter="addToFilter"
-                  :replace-char="replaceChar"
-                  :filter-list-item="filterListGroup"
-                  :item-src="groupSrc"
+    <FilterButton
+      v-for="group in groups"
+      :item="group"
+      :add-to-filter="addToFilter"
+      :replace-char="replaceChar"
+      :filter-list-item="filterListGroup"
+      :item-src="groupSrc"
     />
   </ul>
-
 </div>
 </template>
 
@@ -95,5 +90,4 @@ function addToFilter(item, list) {
 .elementsHidden {
   display: none;
 }
-
 </style>

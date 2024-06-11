@@ -1,5 +1,5 @@
 <script setup>
-import {onUpdated, ref} from "vue";
+import {ref} from "vue";
 
 const key = ref('')
 
@@ -8,10 +8,6 @@ function handleClick(key) {
     localStorage.setItem('Key', key)
   }
 }
-
-onUpdated(()=> {
-  console.log(key.value)
-})
 </script>
 
 <template>
@@ -66,5 +62,4 @@ onUpdated(()=> {
 .storage_button:hover {
   box-shadow: inset 0 0 0 2em white
 }
-
 </style>

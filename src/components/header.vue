@@ -2,7 +2,7 @@
 import PityBox from "@/components/Boxs/PityBox.vue";
 import {ref} from "vue";
 
-const props = defineProps({
+defineProps({
   pity: Object,
   game: String
 })
@@ -16,7 +16,6 @@ let showPity = ref(false)
     <div class="navSpacing">
       <button class="link" @click="showPity = !showPity">Pity</button>
     </div>
-
     <nav class="navigation">
       <RouterLink class="link" to="/">Home</RouterLink>
       <RouterLink class="link" to="Genshin">Genshin</RouterLink>
@@ -107,12 +106,6 @@ let showPity = ref(false)
     justify-content: center;
   }
 
-  .mobileHeader {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
   .mobileHeader button {
     background-color: #333333;
     color: #eee;
@@ -126,12 +119,5 @@ let showPity = ref(false)
   .mobileHeader button:hover {
     transform: rotate(1deg);
   }
-
-  .mobileHeader .navigationButton {
-    width: calc(100vw - 232px);
-    min-width: 145px;
-  }
-
-
 }
 </style>

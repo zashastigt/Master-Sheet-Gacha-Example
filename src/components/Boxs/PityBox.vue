@@ -62,7 +62,7 @@ function changePity(person, game, pity) {
   justify-content: center;
   width: 100%;
   height: 150px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .gameBox {

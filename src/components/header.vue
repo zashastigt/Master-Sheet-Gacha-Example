@@ -47,7 +47,6 @@ let showPity = ref(false)
   border-radius: 0 0 15px 15px;
   border-top: 0;
   z-index: 2;
-  overflow: hidden;
 }
 
 .navBar {

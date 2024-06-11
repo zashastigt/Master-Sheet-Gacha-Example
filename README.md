@@ -1,3 +1,3 @@
-- inlog code toevoegen
 - Wuthering Waves toevoegen
+- api intern doen
 

@@ -12,7 +12,7 @@ const sheetGroups = ["Sword", "Polearm", "Claymore", "Catalyst", "Bow"]
 const store = useGachaStore()
 store.getCharacterInfo(`https://api.ambr.top/v2/en/avatar`, 'Genshin', ['10000005-pyro', '10000005-cryo', '10000005-hydro', '10000005-electro', '10000005-anemo', '10000005-geo', '10000005-dendro',])
 store.getWeaponInfo(`https://api.ambr.top/v2/en/weapon`, 'Genshin', ['11101', '11201', '12101', '12201', '13101', '13201', '14101', '14201', '15101', '15201'])
-store.getSheetData()
+// store.getSheetData()
 
 function travelerFix() {
   return Object.values(store.characters).map(item => {

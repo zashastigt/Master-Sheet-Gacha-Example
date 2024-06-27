@@ -18,16 +18,6 @@ const props = defineProps({
   itemGroup: String
 })
 
-function ceColor(CE) {
-  if (CE.includes('6')) {
-    return 'all'
-  } else if(CE === '') {
-    return 'none'
-  } else {
-    return 'some'
-  }
-}
-
 const rarityColor = computed(() => {
   if (props.item.rarity === 5) {
     return 'rarityFiveStar'
@@ -42,16 +32,6 @@ function changeLevel(direction, name, CE, person) {
   const maxCE = props.listShown ? 6 : 5
   const newCE = Math.max(-1, Math.min(maxCE, parseInt(CE[1] ?? -1) + direction))
   props.dups[props.listShown ? 'Characters' : 'Weapons'][name].CE[person] = (newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '')
-  postData({
-    level: newCE !== -1 ? (props.dubLetter[+props.listShown]) + newCE : '',
-    person: person,
-    name: name,
-    game: props.game,
-    group: props.listShown ? 'Character' : 'Weapon',
-    element: props.sheetElements[props.elements.indexOf(props.item.element)],
-    rank: props.item.rarity,
-    path: props.sheetGroups[props.groups.indexOf(props.item.group)]
-  })
 }
 </script>
 
@@ -69,9 +49,9 @@ function changeLevel(direction, name, CE, person) {
       <img class="group" alt="group" :src="itemGroup">
     </div>
     <div class="itemCE">
-      <div class="CE" v-if="dups" v-for="(CE, key) in dups[props.listShown ? 'Characters' : 'Weapons'][item.name]?.CE">
+      <div class="CE" v-if="dups" v-for="(CE, key) in dups[listShown ? 'Characters' : 'Weapons'][item.name]?.CE">
         <div class="personName">{{key}}</div>
-        <div class="CECount" :class="ceColor(CE)">{{CE}}</div>
+        <div class="CECount some" :class="{all: CE.includes('6'), none: CE === ''}">{{CE}}</div>
         <div class="buttons">
           <button class="up" @click="changeLevel(1, dups[props.listShown ? 'Characters' : 'Weapons'][item.name]?.Name, CE, key)" v-if="listShown ? !CE.includes('6') : !CE.includes('5')">+</button>
           <button class="down" @click="changeLevel(-1, dups[props.listShown ? 'Characters' : 'Weapons'][item.name]?.Name, CE, key)" v-if="CE !== ''">-</button>

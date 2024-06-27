@@ -1,5 +1,6 @@
 import {defineStore} from "pinia";
 import {convertToObject, filterObject, toPascalCase} from "./manipulation";
+import info from "./info.json"
 
 function convertStarRail(object: Record<string, any>, remove: string[]) {
   const newObj = Object.keys(object).map(item => {
@@ -41,22 +42,22 @@ function convertGenshin(object: Record<string, any>, type: string, remove: strin
 
 export const useGachaStore = defineStore('gacha', {
   state: () => ({
-    dupsStarRail: null,
-    dupsGenshin: null,
-    pity: null,
+    dupsStarRail: info.StarRail,
+    dupsGenshin: info.Genshin,
+    pity: info.pity,
     characters: {},
     weapons: {},
   }),
   actions: {
-    async getSheetData() {
-      const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
-      const res = await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
-      const data = await res.json()
-      console.log(data)
-      this.dupsStarRail = await data.StarRail
-      this.dupsGenshin = await data.Genshin
-      this.pity = await data.pity
-    },
+    // async getSheetData() {
+    //   const key = (`; ${localStorage.getItem('Key')}`).split(`; `).pop().split(';')[0];
+    //   const res = await fetch(`https://script.google.com/macros/s/AKfycbxUWFF0-Ntn5aDlDJ9WXyeRJbjocQFEaTcA6klDPBKMcC_taWtrAyaD4XhQ7ypazAG_PQ/exec?cookie=${key}`)
+    //   const data = await res.json()
+    //   console.log(data)
+    //   this.dupsStarRail = await data.StarRail
+    //   this.dupsGenshin = await data.Genshin
+    //   this.pity = await data.pity
+    // },
     async getCharacterInfo(url: string, game: string, remove: string[]) {
       const res = await fetch(url)
       const data = await res.json()

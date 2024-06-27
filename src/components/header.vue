@@ -11,29 +11,29 @@ let showPity = ref(false)
 </script>
 
 <template>
-<div id="header">
-  <div class="navBar">
-    <div class="navSpacing">
-      <button class="link" @click="showPity = !showPity">Pity</button>
+  <div class="header" :class="{headerCorner: !showPity}">
+    <div class="navBar">
+      <div class="navSpacing">
+        <button class="link" @click="showPity = !showPity">Pity</button>
+      </div>
+      <nav class="navigation">
+        <RouterLink class="link" to="/">Home</RouterLink>
+        <RouterLink class="link" to="Genshin">Genshin</RouterLink>
+        <RouterLink class="link" to="StarRail">Star Rail</RouterLink>
+        <RouterLink class="link" to="WutheringWaves">Wuthering Waves</RouterLink>
+      </nav>
+      <div class="navSpacing">&nbsp;</div>
     </div>
-    <nav class="navigation">
-      <RouterLink class="link" to="/">Home</RouterLink>
-      <RouterLink class="link" to="Genshin">Genshin</RouterLink>
-      <RouterLink class="link" to="StarRail">Star Rail</RouterLink>
-      <RouterLink class="link" to="WutheringWaves">Wuthering Waves</RouterLink>
-    </nav>
-    <div class="navSpacing">&nbsp;</div>
+    <PityBox
+      v-if="showPity"
+      :pity="pity"
+      :game="game"
+    />
   </div>
-  <PityBox
-    v-if="showPity"
-    :pity="pity"
-    :game="game"
-  />
-</div>
 </template>
 
 <style scoped>
-#header {
+.header {
   display: flex;
   flex-direction: column;
   width: calc(100% - 100px);
@@ -43,9 +43,13 @@ let showPity = ref(false)
   padding: 5px 10px;
   margin-bottom: 0;
   border: solid 3px #787168;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 0;
   border-top: 0;
   z-index: 2;
+}
+
+.headerCorner {
+  border-radius: 0 0 15px 15px;
 }
 
 .navBar {

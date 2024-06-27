@@ -1,0 +1,4169 @@
+{
+  "pity": {
+    "StarRail": {
+      "Zasha": {
+        "character": {
+          "star5": 10,
+          "star4": 7,
+          "guarantee": true
+        },
+        "weapon": {
+          "star5": 7,
+          "star4": 1
+        },
+        "regular": {
+          "star5": 3,
+          "star4": 3
+        }
+      },
+      "Wilco": {
+        "character": {
+          "star5": 9,
+          "star4": 8,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 8,
+          "star4": 7
+        },
+        "regular": {
+          "star5": 2,
+          "star4": 1
+        }
+      },
+      "Wilfred": {
+        "character": {
+          "star5": 42,
+          "star4": 0,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 9,
+          "star4": 6
+        },
+        "regular": {
+          "star5": 42,
+          "star4": 3
+        }
+      },
+      "Rick": {
+        "character": {
+          "star5": 1,
+          "star4": 0,
+          "guarantee": true
+        },
+        "weapon": {
+          "star5": 15,
+          "star4": 10
+        },
+        "regular": {
+          "star5": 39,
+          "star4": 6
+        }
+      },
+      "Matthijs": {
+        "character": {
+          "star5": 0,
+          "star4": 0,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 0,
+          "star4": 0
+        },
+        "regular": {
+          "star5": 0,
+          "star4": 0
+        }
+      }
+    },
+    "Genshin": {
+      "Zasha": {
+        "character": {
+          "star5": 17,
+          "star4": 9,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 0,
+          "star4": 0
+        },
+        "regular": {
+          "star5": 61,
+          "star4": 2
+        }
+      },
+      "Wilco": {
+        "character": {
+          "star5": 4,
+          "star4": 4,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 3,
+          "star4": 3
+        },
+        "regular": {
+          "star5": 48,
+          "star4": 3
+        }
+      },
+      "Wilfred": {
+        "character": {
+          "star5": 27,
+          "star4": 0,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 0,
+          "star4": 0
+        },
+        "regular": {
+          "star5": 0,
+          "star4": 0
+        }
+      },
+      "Rick": {
+        "character": {
+          "star5": 31,
+          "star4": 0,
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 0,
+          "star4": 0
+        },
+        "regular": {
+          "star5": 21,
+          "star4": 0
+        }
+      }
+    },
+    "WutheringWaves": {
+      "Zasha": {
+        "character": {
+          "star5": 0,
+          "star4": "Zasha",
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 0,
+          "star4": 0
+        },
+        "regular": {
+          "star5": 0,
+          "star4": 0
+        },
+        "rWeapon": {
+          "star5": 0,
+          "star4": 0
+        }
+      },
+      "Rick": {
+        "character": {
+          "star5": 0,
+          "star4": "Rick",
+          "guarantee": false
+        },
+        "weapon": {
+          "star5": 0,
+          "star4": 0
+        },
+        "regular": {
+          "star5": 0,
+          "star4": 0
+        },
+        "rWeapon": {
+          "star5": 0,
+          "star4": 0
+        }
+      }
+    }
+  },
+  "StarRail": {
+    "Characters": {
+      "Firefly": {
+        "Name": "Firefly",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E2",
+          "Wilfred": "",
+          "Rick": "E1",
+          "Matthijs": ""
+        }
+      },
+      "Himeko": {
+        "Name": "Himeko",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E0",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Topaz & Numby": {
+        "Name": "Topaz & Numby",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Trailblazer Fire": {
+        "Name": "Trailblazer Fire",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E6",
+          "Rick": "E4",
+          "Matthijs": ""
+        }
+      },
+      "Asta": {
+        "Name": "Asta",
+        "CE": {
+          "Zasha": "E2",
+          "Wilco": "E2",
+          "Wilfred": "E6",
+          "Rick": "E6",
+          "Matthijs": ""
+        }
+      },
+      "Gallagher": {
+        "Name": "Gallagher",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E0",
+          "Rick": "E4",
+          "Matthijs": ""
+        }
+      },
+      "Guinaifen": {
+        "Name": "Guinaifen",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E1",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Hook": {
+        "Name": "Hook",
+        "CE": {
+          "Zasha": "E5",
+          "Wilco": "E6",
+          "Wilfred": "E0",
+          "Rick": "E3",
+          "Matthijs": ""
+        }
+      },
+      "Gepard": {
+        "Name": "Gepard",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E2",
+          "Wilfred": "",
+          "Rick": "E1",
+          "Matthijs": ""
+        }
+      },
+      "Jingliu": {
+        "Name": "Jingliu",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Ruan Mei": {
+        "Name": "Ruan Mei",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Yanqing": {
+        "Name": "Yanqing",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E0",
+          "Wilfred": "E0",
+          "Rick": "E1",
+          "Matthijs": "E0"
+        }
+      },
+      "Herta": {
+        "Name": "Herta",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E6",
+          "Rick": "E4",
+          "Matthijs": ""
+        }
+      },
+      "March 7th": {
+        "Name": "March 7th",
+        "CE": {
+          "Zasha": "E5",
+          "Wilco": "E1",
+          "Wilfred": "E6",
+          "Rick": "E5",
+          "Matthijs": ""
+        }
+      },
+      "Misha": {
+        "Name": "Misha",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "",
+          "Rick": "E6",
+          "Matthijs": ""
+        }
+      },
+      "Pela": {
+        "Name": "Pela",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E1",
+          "Rick": "E4",
+          "Matthijs": ""
+        }
+      },
+      "Aventurine": {
+        "Name": "Aventurine",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Dan Heng • Imbibitor Lunae": {
+        "Name": "Dan Heng • Imbibitor Lunae",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Dr. Ratio": {
+        "Name": "Dr. Ratio",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Luocha": {
+        "Name": "Luocha",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Trailblazer Imaginary": {
+        "Name": "Trailblazer Imaginary",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Welt": {
+        "Name": "Welt",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "E1",
+          "Matthijs": ""
+        }
+      },
+      "Yukong": {
+        "Name": "Yukong",
+        "CE": {
+          "Zasha": "E2",
+          "Wilco": "E2",
+          "Wilfred": "E0",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Acheron": {
+        "Name": "Acheron",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Bailu": {
+        "Name": "Bailu",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Jing Yuan": {
+        "Name": "Jing Yuan",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Kafka": {
+        "Name": "Kafka",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Arlan": {
+        "Name": "Arlan",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E0",
+          "Wilfred": "E1",
+          "Rick": "E1",
+          "Matthijs": ""
+        }
+      },
+      "Serval": {
+        "Name": "Serval",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E4",
+          "Wilfred": "E6",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Tingyun": {
+        "Name": "Tingyun",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E2",
+          "Rick": "E3",
+          "Matthijs": ""
+        }
+      },
+      "Argenti": {
+        "Name": "Argenti",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Boothill": {
+        "Name": "Boothill",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": "E0"
+        }
+      },
+      "Clara": {
+        "Name": "Clara",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Robin": {
+        "Name": "Robin",
+        "CE": {
+          "Zasha": "E2",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Trailblazer Physical": {
+        "Name": "Trailblazer Physical",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E6",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Hanya": {
+        "Name": "Hanya",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E5",
+          "Wilfred": "E2",
+          "Rick": "E5",
+          "Matthijs": ""
+        }
+      },
+      "Luka": {
+        "Name": "Luka",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E1",
+          "Wilfred": "E3",
+          "Rick": "E1",
+          "Matthijs": ""
+        }
+      },
+      "Natasha": {
+        "Name": "Natasha",
+        "CE": {
+          "Zasha": "E5",
+          "Wilco": "E3",
+          "Wilfred": "E4",
+          "Rick": "E4",
+          "Matthijs": ""
+        }
+      },
+      "Sushang": {
+        "Name": "Sushang",
+        "CE": {
+          "Zasha": "E2",
+          "Wilco": "E4",
+          "Wilfred": "E3",
+          "Rick": "E1",
+          "Matthijs": ""
+        }
+      },
+      "Fu Xuan": {
+        "Name": "Fu Xuan",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Jade": {
+        "Name": "Jade",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Seele": {
+        "Name": "Seele",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Silver Wolf": {
+        "Name": "Silver Wolf",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Sparkle": {
+        "Name": "Sparkle",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "E1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Lynx": {
+        "Name": "Lynx",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E3",
+          "Wilfred": "E3",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Qingque": {
+        "Name": "Qingque",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "E1",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Xueyi": {
+        "Name": "Xueyi",
+        "CE": {
+          "Zasha": "E3",
+          "Wilco": "E5",
+          "Wilfred": "E6",
+          "Rick": "E6",
+          "Matthijs": "E0"
+        }
+      },
+      "Black Swan": {
+        "Name": "Black Swan",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E0",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Blade": {
+        "Name": "Blade",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "E0",
+          "Matthijs": ""
+        }
+      },
+      "Bronya": {
+        "Name": "Bronya",
+        "CE": {
+          "Zasha": "E0",
+          "Wilco": "E0",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Huohuo": {
+        "Name": "Huohuo",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "E0",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Dan Heng": {
+        "Name": "Dan Heng",
+        "CE": {
+          "Zasha": "E1",
+          "Wilco": "E2",
+          "Wilfred": "E6",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Sampo": {
+        "Name": "Sampo",
+        "CE": {
+          "Zasha": "E6",
+          "Wilco": "E6",
+          "Wilfred": "",
+          "Rick": "E6",
+          "Matthijs": ""
+        }
+      }
+    },
+    "Weapons": {
+      "Inherently Unjust Destiny": {
+        "Name": "Inherently Unjust Destiny",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Moment of Victory": {
+        "Name": "Moment of Victory",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "She Already Shut Her Eyes": {
+        "Name": "She Already Shut Her Eyes",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "S2",
+          "Matthijs": ""
+        }
+      },
+      "Texture of Memories": {
+        "Name": "Texture of Memories",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S5",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Along the Passing Shore": {
+        "Name": "Along the Passing Shore",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "In the Name of the World": {
+        "Name": "In the Name of the World",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Incessant Rain": {
+        "Name": "Incessant Rain",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Patience Is All You Need": {
+        "Name": "Patience Is All You Need",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Reforged Remembrance": {
+        "Name": "Reforged Remembrance",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Solitary Healing": {
+        "Name": "Solitary Healing",
+        "CE": {
+          "Zasha": "S3",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Baptism of Pure Thought": {
+        "Name": "Baptism of Pure Thought",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Cruising in the Stellar Sea": {
+        "Name": "Cruising in the Stellar Sea",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "S4",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "In the Night": {
+        "Name": "In the Night",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Sailing Towards a Second Life": {
+        "Name": "Sailing Towards a Second Life",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Sleep Like the Dead": {
+        "Name": "Sleep Like the Dead",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Worrisome, Blissful": {
+        "Name": "Worrisome, Blissful",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "But the Battle Isn't Over": {
+        "Name": "But the Battle Isn't Over",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "S4",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Earthly Escapade": {
+        "Name": "Earthly Escapade",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Flowing Nightglow": {
+        "Name": "Flowing Nightglow",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Past Self in Mirror": {
+        "Name": "Past Self in Mirror",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "An Instant Before A Gaze": {
+        "Name": "An Instant Before A Gaze",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Before Dawn": {
+        "Name": "Before Dawn",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Eternal Calculus": {
+        "Name": "Eternal Calculus",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S5",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Night on the Milky Way": {
+        "Name": "Night on the Milky Way",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Yet Hope Is Priceless": {
+        "Name": "Yet Hope Is Priceless",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Brighter Than the Sun": {
+        "Name": "Brighter Than the Sun",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "I Shall Be My Own Sword": {
+        "Name": "I Shall Be My Own Sword",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "On the Fall of an Aeon": {
+        "Name": "On the Fall of an Aeon",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Something Irreplaceable": {
+        "Name": "Something Irreplaceable",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "The Unreachable Side": {
+        "Name": "The Unreachable Side",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Whereabouts Should Dreams Rest": {
+        "Name": "Whereabouts Should Dreams Rest",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Echoes of the Coffin": {
+        "Name": "Echoes of the Coffin",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Night of Fright": {
+        "Name": "Night of Fright",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Time Waits for No One": {
+        "Name": "Time Waits for No One",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Concert for Two": {
+        "Name": "Concert for Two",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Day One of My New Life": {
+        "Name": "Day One of My New Life",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "S5",
+          "Wilfred": "S2",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Destiny's Threads Forewoven": {
+        "Name": "Destiny's Threads Forewoven",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Landau's Choice": {
+        "Name": "Landau's Choice",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "",
+          "Wilfred": "S1",
+          "Rick": "S2",
+          "Matthijs": ""
+        }
+      },
+      "This Is Me!": {
+        "Name": "This Is Me!",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Trend of the Universal Market": {
+        "Name": "Trend of the Universal Market",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "",
+          "Wilfred": "S3",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "We Are Wildfire": {
+        "Name": "We Are Wildfire",
+        "CE": {
+          "Zasha": "S3",
+          "Wilco": "S3",
+          "Wilfred": "S2",
+          "Rick": "S2",
+          "Matthijs": ""
+        }
+      },
+      "Before the Tutorial Mission Starts": {
+        "Name": "Before the Tutorial Mission Starts",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Boundless Choreo": {
+        "Name": "Boundless Choreo",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S1",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Eyes of the Prey": {
+        "Name": "Eyes of the Prey",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Fermata": {
+        "Name": "Fermata",
+        "CE": {
+          "Zasha": "S4",
+          "Wilco": "S2",
+          "Wilfred": "S2",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Good Night and Sleep Well": {
+        "Name": "Good Night and Sleep Well",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "S5",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "It's Showtime": {
+        "Name": "It's Showtime",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S4",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Resolution Shines As Pearls of Sweat": {
+        "Name": "Resolution Shines As Pearls of Sweat",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S4",
+          "Wilfred": "S3",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "We Will Meet Again": {
+        "Name": "We Will Meet Again",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Final Victor": {
+        "Name": "Final Victor",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Only Silence Remains": {
+        "Name": "Only Silence Remains",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "S3",
+          "Matthijs": ""
+        }
+      },
+      "Return to Darkness": {
+        "Name": "Return to Darkness",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "River Flows in Spring": {
+        "Name": "River Flows in Spring",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Subscribe for More!": {
+        "Name": "Subscribe for More!",
+        "CE": {
+          "Zasha": "S3",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Swordplay": {
+        "Name": "Swordplay",
+        "CE": {
+          "Zasha": "S4",
+          "Wilco": "S1",
+          "Wilfred": "S3",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Carve the Moon, Weave the Clouds": {
+        "Name": "Carve the Moon, Weave the Clouds",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Dance! Dance! Dance!": {
+        "Name": "Dance! Dance! Dance!",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S4",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Dreamville Adventure": {
+        "Name": "Dreamville Adventure",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "For Tomorrow's Journey": {
+        "Name": "For Tomorrow's Journey",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "S5",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Memories of the Past": {
+        "Name": "Memories of the Past",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "S5",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Past and Future": {
+        "Name": "Past and Future",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "S5",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Planetary Rendezvous": {
+        "Name": "Planetary Rendezvous",
+        "CE": {
+          "Zasha": "S4",
+          "Wilco": "S5",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "After the Charmony Fall": {
+        "Name": "After the Charmony Fall",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Geniuses' Repose": {
+        "Name": "Geniuses' Repose",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "",
+          "Wilfred": "S2",
+          "Rick": "S4",
+          "Matthijs": ""
+        }
+      },
+      "Make the World Clamor": {
+        "Name": "Make the World Clamor",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "S3",
+          "Wilfred": "S2",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "The Birth of the Self": {
+        "Name": "The Birth of the Self",
+        "CE": {
+          "Zasha": "S4",
+          "Wilco": "S5",
+          "Wilfred": "S3",
+          "Rick": "S2",
+          "Matthijs": ""
+        }
+      },
+      "The Day The Cosmos Fell": {
+        "Name": "The Day The Cosmos Fell",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "The Seriousness of Breakfast": {
+        "Name": "The Seriousness of Breakfast",
+        "CE": {
+          "Zasha": "S3",
+          "Wilco": "S5",
+          "Wilfred": "S3",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Today Is Another Peaceful Day": {
+        "Name": "Today Is Another Peaceful Day",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Today is Another Peaceful Day": {
+        "Name": "Today is Another Peaceful Day",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "A Secret Vow": {
+        "Name": "A Secret Vow",
+        "CE": {
+          "Zasha": "S3",
+          "Wilco": "S5",
+          "Wilfred": "S1",
+          "Rick": "S2",
+          "Matthijs": ""
+        }
+      },
+      "Flames Afar": {
+        "Name": "Flames Afar",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Indelible Promise": {
+        "Name": "Indelible Promise",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S1",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Nowhere to Run": {
+        "Name": "Nowhere to Run",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "The Moles Welcome You": {
+        "Name": "The Moles Welcome You",
+        "CE": {
+          "Zasha": "S2",
+          "Wilco": "S4",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Under the Blue Sky": {
+        "Name": "Under the Blue Sky",
+        "CE": {
+          "Zasha": "S4",
+          "Wilco": "S4",
+          "Wilfred": "S2",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Woof! Walk Time!": {
+        "Name": "Woof! Walk Time!",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Hey, Over Here": {
+        "Name": "Hey, Over Here",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Perfect Timing": {
+        "Name": "Perfect Timing",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Post-Op Conversation": {
+        "Name": "Post-Op Conversation",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S4",
+          "Wilfred": "S1",
+          "Rick": "S3",
+          "Matthijs": ""
+        }
+      },
+      "Quid Pro Quo": {
+        "Name": "Quid Pro Quo",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "S2",
+          "Wilfred": "S2",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Shared Feeling": {
+        "Name": "Shared Feeling",
+        "CE": {
+          "Zasha": "S3",
+          "Wilco": "S2",
+          "Wilfred": "S1",
+          "Rick": "S1",
+          "Matthijs": ""
+        }
+      },
+      "Warmth Shortens Cold Nights": {
+        "Name": "Warmth Shortens Cold Nights",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "What Is Real?": {
+        "Name": "What Is Real?",
+        "CE": {
+          "Zasha": "S1",
+          "Wilco": "S1",
+          "Wilfred": "S1",
+          "Rick": "",
+          "Matthijs": ""
+        }
+      },
+      "Amber": {
+        "Name": "Amber",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Defense": {
+        "Name": "Defense",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Pioneering": {
+        "Name": "Pioneering",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Hidden Shadow": {
+        "Name": "Hidden Shadow",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Loop": {
+        "Name": "Loop",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Void": {
+        "Name": "Void",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Adversarial": {
+        "Name": "Adversarial",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Arrows": {
+        "Name": "Arrows",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Darting Arrow": {
+        "Name": "Darting Arrow",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Chorus": {
+        "Name": "Chorus",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Mediation": {
+        "Name": "Mediation",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Meshing Cogs": {
+        "Name": "Meshing Cogs",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Data Bank": {
+        "Name": "Data Bank",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Passkey": {
+        "Name": "Passkey",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Sagacity": {
+        "Name": "Sagacity",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Collapsing Sky": {
+        "Name": "Collapsing Sky",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Mutual Demise": {
+        "Name": "Mutual Demise",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Shattered Home": {
+        "Name": "Shattered Home",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Cornucopia": {
+        "Name": "Cornucopia",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Fine Fruit": {
+        "Name": "Fine Fruit",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      },
+      "Multiplication": {
+        "Name": "Multiplication",
+        "CE": {
+          "Zasha": "S5",
+          "Wilco": "S5",
+          "Wilfred": "S5",
+          "Rick": "S5",
+          "Matthijs": ""
+        }
+      }
+    }
+  },
+  "Genshin": {
+    "Characters": {
+      "Jean": {
+        "Name": "Jean",
+        "CE": {
+          "Zasha": "C1",
+          "Wilco": "C4",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kaedehara Kazuha": {
+        "Name": "Kaedehara Kazuha",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Anemo": {
+        "Name": "Traveler Anemo",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": "C1"
+        }
+      },
+      "Venti": {
+        "Name": "Venti",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wanderer": {
+        "Name": "Wanderer",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Xianyun": {
+        "Name": "Xianyun",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Xiao": {
+        "Name": "Xiao",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Faruzan": {
+        "Name": "Faruzan",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lynette": {
+        "Name": "Lynette",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sayu": {
+        "Name": "Sayu",
+        "CE": {
+          "Zasha": "C5",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Shikanoin Heizou": {
+        "Name": "Shikanoin Heizou",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C4",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sucrose": {
+        "Name": "Sucrose",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Aloy": {
+        "Name": "Aloy",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Eula": {
+        "Name": "Eula",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Ganyu": {
+        "Name": "Ganyu",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kamisato Ayaka": {
+        "Name": "Kamisato Ayaka",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Qiqi": {
+        "Name": "Qiqi",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Shenhe": {
+        "Name": "Shenhe",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Cryo": {
+        "Name": "Traveler Cryo",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wriothesley": {
+        "Name": "Wriothesley",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Charlotte": {
+        "Name": "Charlotte",
+        "CE": {
+          "Zasha": "C1",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Chongyun": {
+        "Name": "Chongyun",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Diona": {
+        "Name": "Diona",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Freminet": {
+        "Name": "Freminet",
+        "CE": {
+          "Zasha": "C4",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kaeya": {
+        "Name": "Kaeya",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C3",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Layla": {
+        "Name": "Layla",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C5",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Mika": {
+        "Name": "Mika",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Rosaria": {
+        "Name": "Rosaria",
+        "CE": {
+          "Zasha": "C3",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Alhaitham": {
+        "Name": "Alhaitham",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Baizhu": {
+        "Name": "Baizhu",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Nahida": {
+        "Name": "Nahida",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Tighnari": {
+        "Name": "Tighnari",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Dendro": {
+        "Name": "Traveler Dendro",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Collei": {
+        "Name": "Collei",
+        "CE": {
+          "Zasha": "C4",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kaveh": {
+        "Name": "Kaveh",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kirara": {
+        "Name": "Kirara",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Yaoyao": {
+        "Name": "Yaoyao",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Clorinde": {
+        "Name": "Clorinde",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Cyno": {
+        "Name": "Cyno",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Keqing": {
+        "Name": "Keqing",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Raiden Shogun": {
+        "Name": "Raiden Shogun",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Electro": {
+        "Name": "Traveler Electro",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Yae Miko": {
+        "Name": "Yae Miko",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Beidou": {
+        "Name": "Beidou",
+        "CE": {
+          "Zasha": "C4",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": "C1"
+        }
+      },
+      "Dori": {
+        "Name": "Dori",
+        "CE": {
+          "Zasha": "C4",
+          "Wilco": "C5",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Fischl": {
+        "Name": "Fischl",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kujou Sara": {
+        "Name": "Kujou Sara",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kuki Shinobu": {
+        "Name": "Kuki Shinobu",
+        "CE": {
+          "Zasha": "C4",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lisa": {
+        "Name": "Lisa",
+        "CE": {
+          "Zasha": "C4",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Razor": {
+        "Name": "Razor",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C4",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sethos": {
+        "Name": "Sethos",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Albedo": {
+        "Name": "Albedo",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Arataki Itto": {
+        "Name": "Arataki Itto",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Chiori": {
+        "Name": "Chiori",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Navia": {
+        "Name": "Navia",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Geo": {
+        "Name": "Traveler Geo",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Zhongli": {
+        "Name": "Zhongli",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Gorou": {
+        "Name": "Gorou",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Ningguang": {
+        "Name": "Ningguang",
+        "CE": {
+          "Zasha": "C3",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Noelle": {
+        "Name": "Noelle",
+        "CE": {
+          "Zasha": "C3",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Yun Jin": {
+        "Name": "Yun Jin",
+        "CE": {
+          "Zasha": "C3",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Furina": {
+        "Name": "Furina",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kamisato Ayato": {
+        "Name": "Kamisato Ayato",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Mona": {
+        "Name": "Mona",
+        "CE": {
+          "Zasha": "C1",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Neuvillette": {
+        "Name": "Neuvillette",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Nilou": {
+        "Name": "Nilou",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sangonomiya Kokomi": {
+        "Name": "Sangonomiya Kokomi",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sigewinne": {
+        "Name": "Sigewinne",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Tartaglia": {
+        "Name": "Tartaglia",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Hydro": {
+        "Name": "Traveler Hydro",
+        "CE": {
+          "Zasha": "C1",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Yelan": {
+        "Name": "Yelan",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Barbara": {
+        "Name": "Barbara",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Candace": {
+        "Name": "Candace",
+        "CE": {
+          "Zasha": "C5",
+          "Wilco": "C5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Xingqiu": {
+        "Name": "Xingqiu",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Arlecchino": {
+        "Name": "Arlecchino",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Dehya": {
+        "Name": "Dehya",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Diluc": {
+        "Name": "Diluc",
+        "CE": {
+          "Zasha": "C3",
+          "Wilco": "C1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Hu Tao": {
+        "Name": "Hu Tao",
+        "CE": {
+          "Zasha": "C1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Klee": {
+        "Name": "Klee",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lyney": {
+        "Name": "Lyney",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Traveler Pyro": {
+        "Name": "Traveler Pyro",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Yoimiya": {
+        "Name": "Yoimiya",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Amber": {
+        "Name": "Amber",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C2",
+          "Wilfred": "",
+          "Rick": "C0"
+        }
+      },
+      "Bennett": {
+        "Name": "Bennett",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Chevreuse": {
+        "Name": "Chevreuse",
+        "CE": {
+          "Zasha": "C0",
+          "Wilco": "C3",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Gaming": {
+        "Name": "Gaming",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "C0",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Thoma": {
+        "Name": "Thoma",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Xiangling": {
+        "Name": "Xiangling",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Xinyan": {
+        "Name": "Xinyan",
+        "CE": {
+          "Zasha": "C6",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Yanfei": {
+        "Name": "Yanfei",
+        "CE": {
+          "Zasha": "C2",
+          "Wilco": "C6",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      }
+    },
+    "Weapons": {
+      "Absolution": {
+        "Name": "Absolution",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Aquila Favonia": {
+        "Name": "Aquila Favonia",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Freedom-Sworn": {
+        "Name": "Freedom-Sworn",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Haran Geppaku Futsu": {
+        "Name": "Haran Geppaku Futsu",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Key of Khaj-Nisut": {
+        "Name": "Key of Khaj-Nisut",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Light of Foliar Incision": {
+        "Name": "Light of Foliar Incision",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Mistsplitter Reforged": {
+        "Name": "Mistsplitter Reforged",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Primordial Jade Cutter": {
+        "Name": "Primordial Jade Cutter",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Skyward Blade": {
+        "Name": "Skyward Blade",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Splendor of Tranquil Waters": {
+        "Name": "Splendor of Tranquil Waters",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Summit Shaper": {
+        "Name": "Summit Shaper",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Uraku Misugiri": {
+        "Name": "Uraku Misugiri",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Calamity Queller": {
+        "Name": "Calamity Queller",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Crimson Moon's Semblance": {
+        "Name": "Crimson Moon's Semblance",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Engulfing Lightning": {
+        "Name": "Engulfing Lightning",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Primordial Jade Winged-Spear": {
+        "Name": "Primordial Jade Winged-Spear",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Skyward Spine": {
+        "Name": "Skyward Spine",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Staff of Homa": {
+        "Name": "Staff of Homa",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Staff of the Scarlet Sands": {
+        "Name": "Staff of the Scarlet Sands",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Vortex Vanquisher": {
+        "Name": "Vortex Vanquisher",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Beacon of the Reed Sea": {
+        "Name": "Beacon of the Reed Sea",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Redhorn Stonethresher": {
+        "Name": "Redhorn Stonethresher",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Skyward Pride": {
+        "Name": "Skyward Pride",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Song of Broken Pines": {
+        "Name": "Song of Broken Pines",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Unforged": {
+        "Name": "The Unforged",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Verdict": {
+        "Name": "Verdict",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wolf's Gravestone": {
+        "Name": "Wolf's Gravestone",
+        "CE": {
+          "Zasha": "R1+R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "A Thousand Floating Dreams": {
+        "Name": "A Thousand Floating Dreams",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Cashflow Supervision": {
+        "Name": "Cashflow Supervision",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Crane's Echoing Call": {
+        "Name": "Crane's Echoing Call",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Everlasting Moonglow": {
+        "Name": "Everlasting Moonglow",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Jadefall's Splendor": {
+        "Name": "Jadefall's Splendor",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kagura's Verity": {
+        "Name": "Kagura's Verity",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lost Prayer to the Sacred Winds": {
+        "Name": "Lost Prayer to the Sacred Winds",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Memory of Dust": {
+        "Name": "Memory of Dust",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Skyward Atlas": {
+        "Name": "Skyward Atlas",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Tome of the Eternal Flow": {
+        "Name": "Tome of the Eternal Flow",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Tulaytullah's Remembrance": {
+        "Name": "Tulaytullah's Remembrance",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Amos' Bow": {
+        "Name": "Amos' Bow",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Aqua Simulacra": {
+        "Name": "Aqua Simulacra",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Elegy for the End": {
+        "Name": "Elegy for the End",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Hunter's Path": {
+        "Name": "Hunter's Path",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Polar Star": {
+        "Name": "Polar Star",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Silvershower Heartstrings": {
+        "Name": "Silvershower Heartstrings",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Skyward Harp": {
+        "Name": "Skyward Harp",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The First Great Magic": {
+        "Name": "The First Great Magic",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Thundering Pulse": {
+        "Name": "Thundering Pulse",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Amenoma Kageuchi": {
+        "Name": "Amenoma Kageuchi",
+        "CE": {
+          "Zasha": "R3",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Blackcliff Longsword": {
+        "Name": "Blackcliff Longsword",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Cinnabar Spindle": {
+        "Name": "Cinnabar Spindle",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Favonius Sword": {
+        "Name": "Favonius Sword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R4",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Festering Desire": {
+        "Name": "Festering Desire",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Finale of the Deep": {
+        "Name": "Finale of the Deep",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Fleuve Cendre Ferryman": {
+        "Name": "Fleuve Cendre Ferryman",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Iron Sting": {
+        "Name": "Iron Sting",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kagotsurube Isshin": {
+        "Name": "Kagotsurube Isshin",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lion's Roar": {
+        "Name": "Lion's Roar",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Prototype Rancour": {
+        "Name": "Prototype Rancour",
+        "CE": {
+          "Zasha": "R2",
+          "Wilco": "R1",
+          "Wilfred": "R1",
+          "Rick": "R1"
+        }
+      },
+      "Royal Longsword": {
+        "Name": "Royal Longsword",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sacrificial Sword": {
+        "Name": "Sacrificial Sword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sapwood Blade": {
+        "Name": "Sapwood Blade",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sword of Descension": {
+        "Name": "Sword of Descension",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sword of Narzissenkreuz": {
+        "Name": "Sword of Narzissenkreuz",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Alley Flash": {
+        "Name": "The Alley Flash",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Black Sword": {
+        "Name": "The Black Sword",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Dockhand's Assistant": {
+        "Name": "The Dockhand's Assistant",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Flute": {
+        "Name": "The Flute",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Toukabou Shigure": {
+        "Name": "Toukabou Shigure",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wolf-Fang": {
+        "Name": "Wolf-Fang",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Xiphos' Moonlight": {
+        "Name": "Xiphos' Moonlight",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "\"The Catch\"": {
+        "Name": "\"The Catch\"",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Ballad of the Fjords": {
+        "Name": "Ballad of the Fjords",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Blackcliff Pole": {
+        "Name": "Blackcliff Pole",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Crescent Pike": {
+        "Name": "Crescent Pike",
+        "CE": {
+          "Zasha": "R2",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Deathmatch": {
+        "Name": "Deathmatch",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Dialogues of the Desert Sages": {
+        "Name": "Dialogues of the Desert Sages",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R4",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Dragon's Bane": {
+        "Name": "Dragon's Bane",
+        "CE": {
+          "Zasha": "R5+R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Dragonspine Spear": {
+        "Name": "Dragonspine Spear",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Favonius Lance": {
+        "Name": "Favonius Lance",
+        "CE": {
+          "Zasha": "R4",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Kitain Cross Spear": {
+        "Name": "Kitain Cross Spear",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lithic Spear": {
+        "Name": "Lithic Spear",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Missive Windspear": {
+        "Name": "Missive Windspear",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Moonpiercer": {
+        "Name": "Moonpiercer",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Prospector's Drill": {
+        "Name": "Prospector's Drill",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Prototype Starglitter": {
+        "Name": "Prototype Starglitter",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Rightful Reward": {
+        "Name": "Rightful Reward",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Royal Spear": {
+        "Name": "Royal Spear",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Catch": {
+        "Name": "The Catch",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wavebreaker's Fin": {
+        "Name": "Wavebreaker's Fin",
+        "CE": {
+          "Zasha": "R3",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "\"Ultimate Overlord's Mega Magic Sword\"": {
+        "Name": "\"Ultimate Overlord's Mega Magic Sword\"",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Akuoumaru": {
+        "Name": "Akuoumaru",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Blackcliff Slasher": {
+        "Name": "Blackcliff Slasher",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Favonius Greatsword": {
+        "Name": "Favonius Greatsword",
+        "CE": {
+          "Zasha": "R3",
+          "Wilco": "R5",
+          "Wilfred": "R1",
+          "Rick": "R1"
+        }
+      },
+      "Forest Regalia": {
+        "Name": "Forest Regalia",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Katsuragikiri Nagamasa": {
+        "Name": "Katsuragikiri Nagamasa",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Lithic Blade": {
+        "Name": "Lithic Blade",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Luxurious Sea-Lord": {
+        "Name": "Luxurious Sea-Lord",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Mailed Flower": {
+        "Name": "Mailed Flower",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Makhaira Aquamarine": {
+        "Name": "Makhaira Aquamarine",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Portable Power Saw": {
+        "Name": "Portable Power Saw",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R3",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Prototype Archaic": {
+        "Name": "Prototype Archaic",
+        "CE": {
+          "Zasha": "R2",
+          "Wilco": "R3",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Rainslasher": {
+        "Name": "Rainslasher",
+        "CE": {
+          "Zasha": "R5+R4",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Royal Greatsword": {
+        "Name": "Royal Greatsword",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sacrificial Greatsword": {
+        "Name": "Sacrificial Greatsword",
+        "CE": {
+          "Zasha": "R4",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Serpent Spine": {
+        "Name": "Serpent Spine",
+        "CE": {
+          "Zasha": "R3",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Snow-Tombed Starsilver": {
+        "Name": "Snow-Tombed Starsilver",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Talking Stick": {
+        "Name": "Talking Stick",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Bell": {
+        "Name": "The Bell",
+        "CE": {
+          "Zasha": "R5+R3",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Tidal Shadow": {
+        "Name": "Tidal Shadow",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Whiteblind": {
+        "Name": "Whiteblind",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Ballad of the Boundless Blue": {
+        "Name": "Ballad of the Boundless Blue",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Blackcliff Agate": {
+        "Name": "Blackcliff Agate",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Dodoco Tales": {
+        "Name": "Dodoco Tales",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Eye of Perception": {
+        "Name": "Eye of Perception",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Favonius Codex": {
+        "Name": "Favonius Codex",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Flowing Purity": {
+        "Name": "Flowing Purity",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Frostbearer": {
+        "Name": "Frostbearer",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Fruit of Fulfillment": {
+        "Name": "Fruit of Fulfillment",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Hakushin Ring": {
+        "Name": "Hakushin Ring",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Mappa Mare": {
+        "Name": "Mappa Mare",
+        "CE": {
+          "Zasha": "R2",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Oathsworn Eye": {
+        "Name": "Oathsworn Eye",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Prototype Amber": {
+        "Name": "Prototype Amber",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Royal Grimoire": {
+        "Name": "Royal Grimoire",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sacrificial Fragments": {
+        "Name": "Sacrificial Fragments",
+        "CE": {
+          "Zasha": "R5+R1",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sacrificial Jade": {
+        "Name": "Sacrificial Jade",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Solar Pearl": {
+        "Name": "Solar Pearl",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Widsith": {
+        "Name": "The Widsith",
+        "CE": {
+          "Zasha": "R5+R1",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wandering Evenstar": {
+        "Name": "Wandering Evenstar",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Wine and Song": {
+        "Name": "Wine and Song",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Alley Hunter": {
+        "Name": "Alley Hunter",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Blackcliff Warbow": {
+        "Name": "Blackcliff Warbow",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Cloudforged": {
+        "Name": "Cloudforged",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Compound Bow": {
+        "Name": "Compound Bow",
+        "CE": {
+          "Zasha": "R1",
+          "Wilco": "R2",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "End of the Line": {
+        "Name": "End of the Line",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Fading Twilight": {
+        "Name": "Fading Twilight",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Favonius Warbow": {
+        "Name": "Favonius Warbow",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Hamayumi": {
+        "Name": "Hamayumi",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Ibis Piercer": {
+        "Name": "Ibis Piercer",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R4",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "King's Squire": {
+        "Name": "King's Squire",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Mitternachts Waltz": {
+        "Name": "Mitternachts Waltz",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Mouun's Moon": {
+        "Name": "Mouun's Moon",
+        "CE": {
+          "Zasha": "R5+R1",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Predator": {
+        "Name": "Predator",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Prototype Crescent": {
+        "Name": "Prototype Crescent",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Range Gauge": {
+        "Name": "Range Gauge",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Royal Bow": {
+        "Name": "Royal Bow",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Rust": {
+        "Name": "Rust",
+        "CE": {
+          "Zasha": "R3",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Sacrificial Bow": {
+        "Name": "Sacrificial Bow",
+        "CE": {
+          "Zasha": "R5+R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Scion of the Blazing Sun": {
+        "Name": "Scion of the Blazing Sun",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Song of Stillness": {
+        "Name": "Song of Stillness",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Stringless": {
+        "Name": "The Stringless",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "The Viridescent Hunt": {
+        "Name": "The Viridescent Hunt",
+        "CE": {
+          "Zasha": "",
+          "Wilco": "",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Windblume Ode": {
+        "Name": "Windblume Ode",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Cool Steel": {
+        "Name": "Cool Steel",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R2",
+          "Rick": "R2"
+        }
+      },
+      "Dark Iron Sword": {
+        "Name": "Dark Iron Sword",
+        "CE": {
+          "Zasha": "R2",
+          "Wilco": "R1",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Fillet Blade": {
+        "Name": "Fillet Blade",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Harbinger of Dawn": {
+        "Name": "Harbinger of Dawn",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R4",
+          "Rick": "R4"
+        }
+      },
+      "Skyrider Sword": {
+        "Name": "Skyrider Sword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R4",
+          "Rick": "R4"
+        }
+      },
+      "Traveler's Handy Sword": {
+        "Name": "Traveler's Handy Sword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R1",
+          "Rick": "R1"
+        }
+      },
+      "Black Tassel": {
+        "Name": "Black Tassel",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R3",
+          "Rick": "R3"
+        }
+      },
+      "Halberd": {
+        "Name": "Halberd",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "White Tassel": {
+        "Name": "White Tassel",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Bloodtainted Greatsword": {
+        "Name": "Bloodtainted Greatsword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R3",
+          "Rick": "R3"
+        }
+      },
+      "Debate Club": {
+        "Name": "Debate Club",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R3",
+          "Rick": "R3"
+        }
+      },
+      "Ferrous Shadow": {
+        "Name": "Ferrous Shadow",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Skyrider Greatsword": {
+        "Name": "Skyrider Greatsword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "White Iron Greatsword": {
+        "Name": "White Iron Greatsword",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R1",
+          "Wilfred": "R1",
+          "Rick": "R1"
+        }
+      },
+      "Emerald Orb": {
+        "Name": "Emerald Orb",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R5",
+          "Rick": "R5"
+        }
+      },
+      "Magic Guide": {
+        "Name": "Magic Guide",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R5",
+          "Rick": "R5"
+        }
+      },
+      "Otherworldly Story": {
+        "Name": "Otherworldly Story",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R2",
+          "Rick": "R2"
+        }
+      },
+      "Thrilling Tales of Dragon Slayers": {
+        "Name": "Thrilling Tales of Dragon Slayers",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R3",
+          "Rick": "R3"
+        }
+      },
+      "Twin Nephrite": {
+        "Name": "Twin Nephrite",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Messenger": {
+        "Name": "Messenger",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "",
+          "Rick": ""
+        }
+      },
+      "Raven Bow": {
+        "Name": "Raven Bow",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R1",
+          "Rick": "R1"
+        }
+      },
+      "Recurve Bow": {
+        "Name": "Recurve Bow",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R3",
+          "Rick": "R3"
+        }
+      },
+      "Sharpshooter's Oath": {
+        "Name": "Sharpshooter's Oath",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R4",
+          "Rick": "R4"
+        }
+      },
+      "Slingshot": {
+        "Name": "Slingshot",
+        "CE": {
+          "Zasha": "R5",
+          "Wilco": "R5",
+          "Wilfred": "R5",
+          "Rick": "R5"
+        }
+      }
+    }
+  }
+}
